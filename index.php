@@ -9,14 +9,17 @@
     <?php
     $nome = "Felipe";
     $idade = "16";
+    $verificar = "";
+
     if ($idade >= 18){
-        echo "Você é maior de idade";
+        $verificar = "Você é maior de idade";
     }
     else {
-        echo "Você é menor de idade";
+        $verificar = "Você é menor de idade";
     }
     ?>
     <h1>nome:<?= $nome ?></h1>
-    <p>idade:<?= $idade ?></p>
+    <h2>idade:<?= $idade ?></h2>
+    <p>Você é <?= $verificar ?></p>
 </body>
 </html>
