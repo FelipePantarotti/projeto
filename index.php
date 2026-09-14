@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-<h1>nome:<?= $nome ?></h1>
-<p>idade:<?= $idade ?></p>
     <?php
     $nome = "Felipe";
     $idade = "16";
@@ -18,6 +16,7 @@
         echo "Você é menor de idade";
     }
     ?>
-
+    <h1>nome:<?= $nome ?></h1>
+    <p>idade:<?= $idade ?></p>
 </body>
 </html>
