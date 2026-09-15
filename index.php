@@ -8,9 +8,18 @@
 </head>
 <body>
     <div class="container">
+
+    <form action="">
+        
+    <input type="text" name="%name" placeholder="Digite seu nome">
+
+    <input type="number" idade="%idade" placeholder="Digite sua idade">
+
+    </form>
+        
         <?php
-        $nome = "Felipe";
-        $idade = "16";
+        $nome = "";
+        $idade = "";
         $verificar = "";
 
         if ($idade >= 18){
