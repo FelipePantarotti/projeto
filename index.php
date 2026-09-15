@@ -8,14 +8,6 @@
 </head>
 <body>
     <div class="container">
-
-    <form action="">
-        
-    <input type="text" name="%name" placeholder="Digite seu nome">
-
-    <input type="number" idade="%idade" placeholder="Digite sua idade">
-
-    </form>
         
         <?php
         $nome = "";
@@ -32,6 +24,16 @@
         <h1>nome:<?= $nome ?></h1>
         <h2>idade:<?= $idade ?></h2>
         <p><?= $verificar ?></p>
+
+    <form action="">
+        
+        <input type="text" name="%name" placeholder="Digite seu nome">
+
+        <input type="number" idade="%idade" placeholder="Digite sua idade">
+
+        <button onclick="">Enviar</button>
+
+    </form>
     </div>
 </body>
 </html>
