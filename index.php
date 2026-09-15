@@ -4,7 +4,7 @@
         $resultado = "";
 
         if ($_SERVER["REQUEST_METHOD"]=="POST") {
-            $nome = $_POST["nome"];
+            $nome = $_POST["name"];
             $idade = $_POST["idade"];
         }
         if ($idade >= 18){
