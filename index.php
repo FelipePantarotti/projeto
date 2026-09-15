@@ -28,9 +28,9 @@
 
     <form method="POST">
         
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" placeholder="Digite seu nome">
 
-        <input type="number" id="idade" name="idade">
+        <input type="number" id="idade" name="idade" placeholder="Digite sua Idade">
 
         <button type="submit">Enviar</button>
 
