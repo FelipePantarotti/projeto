@@ -39,7 +39,7 @@
 
     <?php if ($resultado != "") { ?>
 
-        <h2>O <?= $nome ?> é <?= $resultado ?> de idade.</h2>
+        <h2>O <?= $nome ?> é <?= $resultado ?>.</h2>
 
     <?php } ?>
     </div>
