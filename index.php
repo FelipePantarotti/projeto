@@ -36,7 +36,9 @@
     </form>
 
     <?php if ($resultado != "") { ?>
-    <h1>nome: <?= $nome ?></h1>
+
+        <h2>O <?= $nome ?> é <?= $resultado ?> de idade.</h2>
+        
     <?php } ?>
     </div>
 </body>
