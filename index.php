@@ -32,13 +32,15 @@
 
         <input type="number" id="idade" name="idade">
 
+        <button type="submit">Enviar</button>
+
         
     </form>
 
     <?php if ($resultado != "") { ?>
 
         <h2>O <?= $nome ?> é <?= $resultado ?> de idade.</h2>
-        
+
     <?php } ?>
     </div>
 </body>
