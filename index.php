@@ -36,7 +36,7 @@
     </form>
 
     <?php if ($resultado != "") { ?>
-    <h1>nome: <?= $nome ?>></h1>
+    <h1>nome: <?= $nome ?></h1>
     <?php } ?>
     </div>
 </body>
