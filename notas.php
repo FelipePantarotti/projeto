@@ -37,13 +37,14 @@
 <body>
 <form method="POST">
         
-        <input type="text" id="name" name="name" placeholder="Digite seu nome">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua Idade">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua primeira nota">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua segunda nota">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua terceira nota">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua quarta nota">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua quinta nota">
+<form method="POST">
+        <input type="text" id="name" name="name" placeholder="Digite seu nome" required> <br><br>
+        <input type="number" id="idade" name="idade" placeholder="Digite sua Idade" required> <br><br>
+        <input type="number" id="nota1" name="nota1" placeholder="Digite sua primeira nota" required> <br><br>
+        <input type="number" id="nota2" name="nota2" placeholder="Digite sua segunda nota" required> <br><br>
+        <input type="number" id="nota3" name="nota3" placeholder="Digite sua terceira nota" required> <br><br>
+        <input type="number" id="nota4" name="nota4" placeholder="Digite sua quarta nota" required> <br><br>
+        <input type="number" id="nota5" name="nota5" placeholder="Digite sua quinta nota" required> <br><br>
 
         <button type="submit">Enviar</button>
 
