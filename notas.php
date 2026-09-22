@@ -10,7 +10,8 @@ $media = 0;
 $resultado = "";
 $situacao = "";
 $erro = "";
-$pontos = "";
+$pontos = 0;
+$resultado_class = "";
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
         $nome = $_POST["name"];
@@ -36,16 +37,20 @@ $pontos = "";
         }
         if ($media == 10){
             $resultado = "Aprovado com excelência!";
+            $resultado_class = "excelencia";
         }
         else if ($media >= 7){
             $resultado = "Aprovado";
+            $resultado_class = "aprovado";
         }
         else if ($media >= 5){
             $resultado = "Recuperação";
+            $resultado_class = "recuperar";
             $pontos = 7 - $media;
         }
         else {
             $resultado = "Reprovado";
+            $resultado_class = "reprovado";
             $pontos = 7 - $media;
         }
     }
@@ -80,7 +85,7 @@ $pontos = "";
     <h2>Faltam <?= $pontos ?> para atingir a média</h2>
     <h2><?= $erro ?></h2>
 
-        <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
+    <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
 </div>
 </body>
 </html>

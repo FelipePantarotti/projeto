@@ -43,3 +43,10 @@ h2 {
     font-size: 14px;
     text-align: center;
 }
+.excelencia {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: rgb(107, 24, 139);
+    padding: 2px;
+    border-radius: 4px;
+}
