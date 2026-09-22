@@ -7,6 +7,9 @@
         $nota4 = "";
         $nota5 = "";
         $resultado = "";
+        $situacao = "";
+        $erro = "";
+        $pontos = "";
 
         if ($_SERVER["REQUEST_METHOD"]=="POST") {
             $nome = $_POST["name"];
@@ -19,15 +22,31 @@
         
         $media = ($nota1 * 2 + $nota2 * 3 + $nota3 * 1 + $nota4 * 1 + $nota5 * 3) / 10;
         }
-        if ($media >= 7){
-            $resultado = "aprovado";
+        if ($media == 10){
+            $resultado = "Aprovado com excelência!";
+        }
+        else if ($media >= 7){
+            $resultado = "Aprovado";
         }
         else if ($media >= 5){
-            $resultado = "recuperação";
+            $resultado = "Recuperação";
+            $pontos = 7 - $media;
         }
         else {
-            $resultado = "reprovado";
+            $resultado = "Reprovado";
+            $pontos = 7 - $media;
         }
+
+        if ($idade <= 0){
+            $erro = "A idade deve ser maior que 0";
+        }
+        else if ($nota1 < 0 or $nota1 > 10 or
+                 $nota2 < 0 or $nota2 > 10 or
+                 $nota3 < 0 or $nota3 > 10 or
+                 $nota4 < 0 or $nota4 > 10 or
+                 $nota5 < 0 or $nota5 > 10){
+                    $erro = "A nota deve ser de 0 a 10";
+                 }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -56,8 +75,10 @@
 
         <h2>Aluno: <?= $nome ?></h2>
         <h2>Idade:<?= $idade ?></h2>
-        <h2>Media calculada:<?= $media ?></h2>
+        <h2>Média calculada:<?= $media ?></h2>
         <h2>Situação do aluno: <?= $resultado ?></h2>
+        <h2>Faltam <?= $pontos ?> para atingir a média</h2>
+
         <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
 </div>
 </body>
