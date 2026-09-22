@@ -19,9 +19,21 @@
             $nota3 = $_POST["nota3"];
             $nota4 = $_POST["nota4"];
             $nota5 = $_POST["nota5"];
-        
+   
+        if ($idade == 0){
+            $erro = "A idade deve ser maior que 0";
+        }
+        else if ($nota1 < 0 or $nota1 > 10 or
+                 $nota2 < 0 or $nota2 > 10 or
+                 $nota3 < 0 or $nota3 > 10 or
+                 $nota4 < 0 or $nota4 > 10 or
+                 $nota5 < 0 or $nota5 > 10){
+                    $erro = "A nota deve ser de 0 a 10";
+                 }
+
         $media = ($nota1 * 2 + $nota2 * 3 + $nota3 * 1 + $nota4 * 1 + $nota5 * 3) / 10;
         }
+
         if ($media == 10){
             $resultado = "Aprovado com excelência!";
         }
@@ -36,17 +48,6 @@
             $resultado = "Reprovado";
             $pontos = 7 - $media;
         }
-
-        if ($idade == 0){
-            $erro = "A idade deve ser maior que 0";
-        }
-        else if ($nota1 < 0 or $nota1 > 10 or
-                 $nota2 < 0 or $nota2 > 10 or
-                 $nota3 < 0 or $nota3 > 10 or
-                 $nota4 < 0 or $nota4 > 10 or
-                 $nota5 < 0 or $nota5 > 10){
-                    $erro = "A nota deve ser de 0 a 10";
-                 }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -59,7 +60,6 @@
 </head>
 <body>
 <div class="container">
-    <form method="POST">
             
     <form method="POST">
         <input type="text" id="name" name="name" placeholder="Digite seu nome"> <br><br>
