@@ -44,9 +44,30 @@ h2 {
     text-align: center;
 }
 .excelencia {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     background-color: rgb(107, 24, 139);
     padding: 2px;
+    border-radius: 4px;
+}
+.aprovado {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #257e2c;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+.recuperacao {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #f59c0c;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+.reprovado {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #e61313;
+    padding: 2px 8px;
     border-radius: 4px;
 }
