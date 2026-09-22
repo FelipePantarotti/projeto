@@ -81,7 +81,7 @@ $resultado_class = "";
     <h2>Aluno: <?= $nome ?></h2>
     <h2>Idade:<?= $idade ?></h2>
     <h2>Média calculada:<?= $media ?></h2>
-    <h2>Situação do aluno: <?= $resultado ?></h2>
+    <h2>Situação do aluno: <span class="<?= $classe_resultado ?>"><?= $resultado ?></span></h2>
     <h2>Faltam <?= $pontos ?> para atingir a média</h2>
     <h2><?= $erro ?></h2>
 
