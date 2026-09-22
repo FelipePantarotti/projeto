@@ -1,6 +1,6 @@
 <?php
         $nome = "";
-        $idade = 0;
+        $idade = "";
         $resultado = "";
 
         if ($_SERVER["REQUEST_METHOD"]=="POST") {
