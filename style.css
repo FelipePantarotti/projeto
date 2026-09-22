@@ -71,3 +71,10 @@ h2 {
     padding: 2px 8px;
     border-radius: 4px;
 }
+.reprovado_frequencia{
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #e61313;
+    padding: 2px 8px;
+    border-radius: 4px;
+}

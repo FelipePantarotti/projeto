@@ -43,6 +43,7 @@ $frequencia = 0;
         }
         else if ($media >= 7 && $frequencia < 75){
             $resultado = "Reprovado por frequência";
+            $resultado_class = "reprovado_frequencia";
         }
         else if ($media >= 7){
             $resultado = "Aprovado";
@@ -74,7 +75,7 @@ $frequencia = 0;
     <form method="POST">
         <input type="text" id="name" name="name" placeholder="Digite seu nome"> <br><br>
         <input type="number" id="idade" name="idade" placeholder="Digite sua Idade"> <br><br>
-        <input type="number" id="frequencia" name="frequencia" placeholder="Digite sua Frequencia de 0% a 100%"> <br><br>
+        <input type="number" id="frequencia" name="frequencia" placeholder="Digite sua Frequencia"> <br><br>
         <input type="number" step="any" id="nota1" name="nota1" placeholder="Digite sua primeira nota"> <br><br>
         <input type="number" step="any" id="nota2" name="nota2" placeholder="Digite sua segunda nota"> <br><br>
         <input type="number" step="any" id="nota3" name="nota3" placeholder="Digite sua terceira nota"> <br><br>
@@ -86,9 +87,10 @@ $frequencia = 0;
 
     <h2>Aluno: <?= $nome ?></h2>
     <h2>Idade:<?= $idade ?></h2>
+    <h2>Frequência do aluno: <?= $frequencia ?></h2>
     <h2>Média calculada:<?= $media ?></h2>
-    <h2>Situação do aluno: <span class="<?= $resultado_class ?>"><?= $resultado ?></span></h2>
     <h2>Faltam <?= $pontos ?> para atingir a média</h2>
+    <h2>Situação do aluno: <span class="<?= $resultado_class ?>"><?= $resultado ?></span></h2>
     <h2><?= $erro ?></h2>
 
     <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
