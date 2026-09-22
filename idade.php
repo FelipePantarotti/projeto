@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.php">
-    <title>verificador de idade</title>
+    <title>Verificador de idade</title>
 </head>
 <body>
     <div class="container">

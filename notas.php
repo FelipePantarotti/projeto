@@ -36,7 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.php">
-    <title>verificador de notas</title>
+    <title>Verificador de notas</title>
 </head>
 <body>
 <form method="POST">
@@ -55,9 +55,9 @@
         
     </form>
 
-    <h2><?= $nome ?></h2>
-    <h2>idade:<?= $idade ?></h2>
-    <h2>media calculada:<?= $media ?></h2>
-    <h2>situação do aluno: <?= $resultado ?></h2>
+    <h2>Aluno: <?= $nome ?></h2>
+    <h2>Idade:<?= $idade ?></h2>
+    <h2>Media calculada:<?= $media ?></h2>
+    <h2>Situação do aluno: <?= $resultado ?></h2>
 </body>
 </html>
