@@ -39,9 +39,10 @@
     <title>Verificador de notas</title>
 </head>
 <body>
-<form method="POST">
-        
-<form method="POST">
+<div class="container">
+    <form method="POST">
+            
+    <form method="POST">
         <input type="text" id="name" name="name" placeholder="Digite seu nome"> <br><br>
         <input type="number" id="idade" name="idade" placeholder="Digite sua Idade"> <br><br>
         <input type="number" id="nota1" name="nota1" placeholder="Digite sua primeira nota"> <br><br>
@@ -51,13 +52,13 @@
         <input type="number" id="nota5" name="nota5" placeholder="Digite sua quinta nota"> <br><br>
 
         <button type="submit">Enviar</button>
-
-        
     </form>
 
-    <h2>Aluno: <?= $nome ?></h2>
-    <h2>Idade:<?= $idade ?></h2>
-    <h2>Media calculada:<?= $media ?></h2>
-    <h2>Situação do aluno: <?= $resultado ?></h2>
+        <h2>Aluno: <?= $nome ?></h2>
+        <h2>Idade:<?= $idade ?></h2>
+        <h2>Media calculada:<?= $media ?></h2>
+        <h2>Situação do aluno: <?= $resultado ?></h2>
+        <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
+</div>
 </body>
 </html>
