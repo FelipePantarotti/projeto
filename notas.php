@@ -1,11 +1,11 @@
 <?php
 $nome = "";
-$idade = "";
-$nota1 = "";
-$nota2 = "";
-$nota3 = "";
-$nota4 = "";
-$nota5 = "";
+$idade = 0;
+$nota1 = 0;
+$nota2 = 0;
+$nota3 = 0;
+$nota4 = 0;
+$nota5 = 0;
 $media = "";
 $resultado = "";
 $situacao = "";
