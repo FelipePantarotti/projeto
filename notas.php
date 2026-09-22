@@ -73,13 +73,17 @@
         <button type="submit">Enviar</button>
     </form>
 
-    <?php if (empty($erro) && $media !== null): ?>
-        <h2>Aluno: <?= $nome ?></h2>
-        <h2>Idade:<?= $idade ?></h2>
-        <h2>Média calculada:<?= $media ?></h2>
-        <h2>Situação do aluno: <?= $resultado ?></h2>
-        <h2>Faltam <?= $pontos ?> para atingir a média</h2>
+    
+<?php if (empty($erro) && $media !== null): ?>
+    <h2>Aluno: <?= htmlspecialchars($nome) ?></h2>
+    <h2>Idade: <?= $idade ?></h2>
+    <h2>Média calculada: <?= number_format($media, 2, ',', '.') ?></h2>
+    <h2>Situação do aluno: <?= $resultado ?></h2>
+
+    <?php if ($pontos !== null): ?>
+        <h2>Faltam <?= number_format($pontos, 2, ',', '.') ?> ponto(s) para atingir a média</h2>
     <?php endif; ?>
+<?php endif; ?>
         <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
 </div>
 </body>
