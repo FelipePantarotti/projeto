@@ -21,7 +21,7 @@
             $nota5 = $_POST["nota5"];
             $erro = $_POST["erro"];
    
-        if ($idade == 0 or $idade == ""){
+        if ($idade == 0){
             $erro = "A idade deve ser maior que 0";
         }
         else if ($nota1 < 0 or $nota1 > 10 or
