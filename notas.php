@@ -20,7 +20,7 @@
             $nota4 = $_POST["nota4"];
             $nota5 = $_POST["nota5"];
    
-        if ($idade == 0){
+        if ($idade == 0 or $idade == ""){
             $erro = "A idade deve ser maior que 0";
         }
         else if ($nota1 < 0 or $nota1 > 10 or
@@ -30,10 +30,9 @@
                  $nota5 < 0 or $nota5 > 10){
                     $erro = "A nota deve ser de 0 a 10";
                  }
-
+        else {
         $media = ($nota1 * 2 + $nota2 * 3 + $nota3 * 1 + $nota4 * 1 + $nota5 * 3) / 10;
         }
-
         if ($media == 10){
             $resultado = "Aprovado com excelência!";
         }
@@ -48,6 +47,7 @@
             $resultado = "Reprovado";
             $pontos = 7 - $media;
         }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -73,12 +73,13 @@
         <button type="submit">Enviar</button>
     </form>
 
+    <?php if (empty($erro) && $media !== null): ?>
         <h2>Aluno: <?= $nome ?></h2>
         <h2>Idade:<?= $idade ?></h2>
         <h2>Média calculada:<?= $media ?></h2>
         <h2>Situação do aluno: <?= $resultado ?></h2>
         <h2>Faltam <?= $pontos ?> para atingir a média</h2>
-
+    <?php endif; ?>
         <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
 </div>
 </body>
