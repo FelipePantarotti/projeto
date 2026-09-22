@@ -54,7 +54,7 @@
         
     </form>
 
-    <h2><?= $nome ?>, idade:<?= $idade ?>, media calculada:<?= $media ?></h2>
+    <h2><?= $nome ?>, idade:<?= $idade ?>, media calculada:<?= $media ?></h2>,<br><br>
     <h2>situação do aluno: <?= $resultado ?></h2>
 </body>
 </html>
