@@ -12,6 +12,7 @@ $situacao = "";
 $erro = "";
 $pontos = 0;
 $resultado_class = "";
+$frequencia = 0;
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
         $nome = $_POST["name"];
@@ -21,6 +22,7 @@ $resultado_class = "";
         $nota3 = $_POST["nota3"];
         $nota4 = $_POST["nota4"];
         $nota5 = $_POST["nota5"];
+        $frequencia = $_POST["frequencia"];
    
      if ($idade <= 0){
         $erro = "A idade deve ser maior que 0";
@@ -35,9 +37,12 @@ $resultado_class = "";
     else {
         $media = ($nota1 * 2 + $nota2 * 3 + $nota3 * 1 + $nota4 * 1 + $nota5 * 3) / 10;
         }
-        if ($media == 10){
+        if ($media == 10 && $frequencia >= 75){
             $resultado = "Aprovado com excelência!";
             $resultado_class = "excelencia";
+        }
+        else if ($media >= 7 && $frequencia < 75){
+            $resultado = "Reprovado por frequência";
         }
         else if ($media >= 7){
             $resultado = "Aprovado";
@@ -69,6 +74,7 @@ $resultado_class = "";
     <form method="POST">
         <input type="text" id="name" name="name" placeholder="Digite seu nome"> <br><br>
         <input type="number" id="idade" name="idade" placeholder="Digite sua Idade"> <br><br>
+        <input type="number" id="frequencia" name="frequencia" placeholder="Digite sua Frequencia de 0% a 100%"> <br><br>
         <input type="number" step="any" id="nota1" name="nota1" placeholder="Digite sua primeira nota"> <br><br>
         <input type="number" step="any" id="nota2" name="nota2" placeholder="Digite sua segunda nota"> <br><br>
         <input type="number" step="any" id="nota3" name="nota3" placeholder="Digite sua terceira nota"> <br><br>
