@@ -35,6 +35,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.php">
     <title>verificador de notas</title>
 </head>
 <body>
@@ -54,8 +55,9 @@
         
     </form>
 
-    <h2><?= $nome ?>, idade:<?= $idade ?>, media calculada:<?= $media ?></h2>,
-    <br>
+    <h2><?= $nome ?></h2>
+    <h2>idade:<?= $idade ?></h2>
+    <h2>media calculada:<?= $media ?></h2>
     <h2>situação do aluno: <?= $resultado ?></h2>
 </body>
 </html>
