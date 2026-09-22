@@ -37,7 +37,7 @@
             $pontos = 7 - $media;
         }
 
-        if ($idade <= 0){
+        if ($idade == 0){
             $erro = "A idade deve ser maior que 0";
         }
         else if ($nota1 < 0 or $nota1 > 10 or
