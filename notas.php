@@ -6,6 +6,7 @@
         $nota3 = "";
         $nota4 = "";
         $nota5 = "";
+        $media = "";
         $resultado = "";
         $situacao = "";
         $erro = "";
@@ -19,15 +20,17 @@
             $nota3 = $_POST["nota3"];
             $nota4 = $_POST["nota4"];
             $nota5 = $_POST["nota5"];
-            $erro = $_POST["erro"];
    
-        if ($idade <= 0 || $nota1 < 0 || $nota1 > 10 ||
-            $nota2 < 0 || $nota2 > 10 ||
-            $nota3 < 0 || $nota3 > 10 ||
-            $nota4 < 0 || $nota4 > 10 ||
-            $nota5 < 0 || $nota5 > 10){
-            $erro = "A idade deve ser maior que 0 e a nota deve ser entre 0 e 10";
+        if ($idade <= 0){
+            $erro = "A idade deve ser maior que 0";
         }
+        else if ($nota1 < 0 or $nota1 > 10 or
+                 $nota2 < 0 or $nota2 > 10 or
+                 $nota3 < 0 or $nota3 > 10 or
+                 $nota4 < 0 or $nota4 > 10 or
+                 $nota5 < 0 or $nota5 > 10){
+                    $erro = "A nota deve ser de 0 a 10";
+                 }
         else {
         $media = ($nota1 * 2 + $nota2 * 3 + $nota3 * 1 + $nota4 * 1 + $nota5 * 3) / 10;
         }
