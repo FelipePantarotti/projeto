@@ -31,10 +31,12 @@ $erro = "";
             <input type="text" id="name" name="usuario" placeholder="Digite seu usuário"> <br><br>
             <input type="text" id="senha" name="senha" placeholder="Digite sua senha"> <br><br>
             <button type="submit">Enviar</button>
+
+            <h2><?= $mensagem ?></h2>
+            <h2><?= $erro ?></h2>
         </form>
     </div>
 
-    <h2><?= $mensagem ?></h2>
-    <h2><?= $erro ?></h2>
+    <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
 </body>
 </html>
