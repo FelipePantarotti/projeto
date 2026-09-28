@@ -26,7 +26,7 @@ $erro = "";
 <body>
     <form method="POST">
         <input type="text" id="name" name="usuario" placeholder="Digite seu usuário"> <br><br>
-        <input type="number" id="idade" name="senha" placeholder="Digite sua senha"> <br><br>
+        <input type="number" id="senha" name="senha" placeholder="Digite sua senha"> <br><br>
         <button type="submit">Enviar</button>
     </form>
 
