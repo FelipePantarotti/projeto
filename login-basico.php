@@ -31,5 +31,6 @@ $erro = "";
     </form>
 
     <h2><?= $mensagem ?></h2>
+    <h2><?= $erro ?></h2>
 </body>
 </html>
