@@ -24,11 +24,13 @@ $erro = "";
     <title>login</title>
 </head>
 <body>
-    <form method="POST">
-        <input type="text" id="name" name="usuario" placeholder="Digite seu usuário"> <br><br>
-        <input type="text" id="senha" name="senha" placeholder="Digite sua senha"> <br><br>
-        <button type="submit">Enviar</button>
-    </form>
+    <div class="container">
+        <form method="POST">
+            <input type="text" id="name" name="usuario" placeholder="Digite seu usuário"> <br><br>
+            <input type="text" id="senha" name="senha" placeholder="Digite sua senha"> <br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
     <h2><?= $mensagem ?></h2>
     <h2><?= $erro ?></h2>
