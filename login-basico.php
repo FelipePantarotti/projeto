@@ -8,7 +8,7 @@ $erro = "";
     $usuario = $_POST["usuario"];
     $senha = $_POST["senha"];
 
-    if ($usuario == "aluno2026" && $senha == "senha2026"){
+    if ($usuario == "alunosenai" && $senha == "senhasenai"){
         $mensagem = "Login realizado com sucesso!";
     }
     else {
