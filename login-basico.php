@@ -28,5 +28,8 @@ $erro = "";
         <input type="text" id="name" name="usuario" placeholder="Digite seu usuário"> <br><br>
         <input type="number" id="idade" name="senha" placeholder="Digite sua senha"> <br><br>
         <button type="submit">Enviar</button>
+    </form>
+
+    <h2><?= $mensagem ?></h2>
 </body>
 </html>
