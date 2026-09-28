@@ -34,9 +34,10 @@ $erro = "";
 
             <h2><?= $mensagem ?></h2>
             <h2><?= $erro ?></h2>
+            
+            <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
         </form>
     </div>
 
-    <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
 </body>
 </html>
