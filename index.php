@@ -9,6 +9,6 @@
 <body>
     <a href="idade.php" class="bt-voltar">Verificador de idade</a>
     <a href="notas.php" class="bt-voltar">Verificador de notas</a>
-    <a href="login-basico.php" class="bt-voltar">Verificador de notas</a>
+    <a href="login-basico.php" class="bt-voltar">Login básico</a>
 </body>
 </html>
