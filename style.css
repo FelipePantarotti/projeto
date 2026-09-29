@@ -2,97 +2,81 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(179, 176, 176);
     display: flex;
-    flex-direction: column; /* Organiza os itens de cima para baixo */
-    align-items: center;    /* Centraliza tudo horizontalmente */
-    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-}
-
-input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc; /* Adicionada cor na borda */
-    border-radius: 4px;
-    font-size: 15px;
-    width: 100%; /* Faz o input ocupar toda a largura disponível */
-    box-sizing: border-box; /* Impede que o padding quebre a largura */
-}
-
-button {
-    padding: 10px;
-    background-color: rgb(0, 150, 250);
-    color: white;
-    border: none; /* Removida a borda padrão do botão */
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%; /* Faz o botão ocupar toda a largura */
-    cursor: pointer; /* Adicionado cursor de mãozinha */
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: rgb(0, 120, 200); /* Efeito ao passar o mouse */
-}
-
-h2 {
-    font-size: 16px;
-    color: black;
-    margin: 6px;
-    font-weight: normal;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
     background-color: #ffffff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    text-align: center; /* Centraliza o conteúdo (como o link voltar) */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button, .bt-menu, .bt-voltar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(0, 150, 250);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover, .bt-menu:hover {
+    background-color: rgb(0, 120, 210);
 }
 
 .bt-voltar {
-    display: block; /* block em vez de inline-block para ocupar a linha toda */
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #6c757d; 
-    color: white;
-    text-decoration: none; 
-    border-radius: 4px;
-    font-size: 14px;
-    text-align: center;
-    transition: 0.3s;
+    background-color: #6c757d;
+    margin-top: 10px;
 }
 
 .bt-voltar:hover {
     background-color: #5a6268;
 }
 
-/* Classes de status mantidas do seu código original */
-.excelencia {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    background-color: rgb(107, 24, 139);
-    padding: 2px;
+.mensagem-sucesso {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
     border-radius: 4px;
-}
-.aprovado {
-    color: #ffffff;
-    font-weight: bold;
-    background-color: #257e2c;
-    padding: 2px 8px;
-    border-radius: 4px;
-}
-.recuperar {
-    color: #ffffff;
-    font-weight: bold;
-    background-color: #f59c0c;
-    padding: 2px 8px;
-    border-radius: 4px;
-}
-.reprovado, .reprovado_frequencia {
-    color: #ffffff;
-    font-weight: bold;
-    background-color: #e61313;
-    padding: 2px 8px;
-    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
