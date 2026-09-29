@@ -2,38 +2,56 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(179, 176, 176);
     display: flex;
+    flex-direction: column; /* Organiza os itens de cima para baixo */
+    align-items: center;    /* Centraliza tudo horizontalmente */
     padding: 30px;
-    justify-content: center;
+    margin: 0;
 }
+
 input {
-    padding: 8px;
-    margin-bottom: 12px;
-    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Adicionada cor na borda */
     border-radius: 4px;
     font-size: 15px;
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    box-sizing: border-box; /* Impede que o padding quebre a largura */
 }
+
 button {
     padding: 10px;
     background-color: rgb(0, 150, 250);
     color: white;
+    border: none; /* Removida a borda padrão do botão */
     border-radius: 5px;
     font-size: 16px;
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    cursor: pointer; /* Adicionado cursor de mãozinha */
+    transition: 0.3s;
 }
+
+button:hover {
+    background-color: rgb(0, 120, 200); /* Efeito ao passar o mouse */
+}
+
 h2 {
     font-size: 16px;
     color: black;
     margin: 6px;
     font-weight: normal;
 }
+
 .container {
     background-color: #ffffff;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 320px;
+    text-align: center; /* Centraliza o conteúdo (como o link voltar) */
 }
+
 .bt-voltar {
-    display: inline-block;
+    display: block; /* block em vez de inline-block para ocupar a linha toda */
     margin-top: 15px;
     padding: 10px 15px;
     background-color: #6c757d; 
@@ -42,7 +60,14 @@ h2 {
     border-radius: 4px;
     font-size: 14px;
     text-align: center;
+    transition: 0.3s;
 }
+
+.bt-voltar:hover {
+    background-color: #5a6268;
+}
+
+/* Classes de status mantidas do seu código original */
 .excelencia {
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -64,14 +89,7 @@ h2 {
     padding: 2px 8px;
     border-radius: 4px;
 }
-.reprovado {
-    color: #ffffff;
-    font-weight: bold;
-    background-color: #e61313;
-    padding: 2px 8px;
-    border-radius: 4px;
-}
-.reprovado_frequencia{
+.reprovado, .reprovado_frequencia {
     color: #ffffff;
     font-weight: bold;
     background-color: #e61313;
