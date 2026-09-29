@@ -1,8 +1,5 @@
 <?php
 
-$nome = "";
-$genero = "";
-$nota = "";
     require "conexao.php";
 
     echo "<br>Cadastro de jogos";
@@ -16,6 +13,10 @@ $nota = "";
 
     $pdo->exec($sql);
 
+    $nome = "";
+    $genero = "";
+    $nota = "";
+    
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
