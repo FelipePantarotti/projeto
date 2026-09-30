@@ -18,12 +18,9 @@
     $nota = "";
     $ano_lancamento = "";
     
-    // $sql_alter = 
-    // "ALTER TABLE jogos 
-    // ADD ano_lancamento INT
-    // ";
+    $sql_alter = "ALTER TABLE jogos ADD ano_lancamento INT";
 
-    // $pdo->exec($sql_alter);
+    $pdo->exec($sql_alter);
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
         $nome = $_POST["nome"];
