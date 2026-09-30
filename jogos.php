@@ -8,19 +8,11 @@
         id INT PRIMARY KEY AUTO_INCREMENT,
         nome VARCHAR(100),
         genero VARCHAR(50),
-        nota INT
+        nota INT,
+        ano_lancamento INT
     )";
 
     $pdo->exec($sql);
-
-    $nome = "";
-    $genero = "";
-    $nota = "";
-    $ano_lancamento = "";
-    
-    $sql_alter = "ALTER TABLE jogos ADD ano_lancamento INT";
-
-    $pdo->exec($sql_alter);
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
         $nome = $_POST["nome"];
