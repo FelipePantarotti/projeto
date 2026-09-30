@@ -67,6 +67,12 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <a href="index.php" class="bt-voltar">Voltar ao inicio</a>
     </form>
 
+    <?php if ($mensagem != "") { ?>
+        <p style="text-align: center; font-weight: bold; color: red;">
+            <?= $mensagem ?>
+        </p>
+    <?php } ?>
+
     <h2>JOGOS CADASTRADOS</h2>
     <table>
         <tr>
@@ -86,7 +92,6 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?= $jogo["nota"] ?></td>
                 <td><?= $jogo["ano_lancamento"] ?></td>
             </tr>
-            <?= $mensagem ?>
         <?php } ?>
 
     </table>
