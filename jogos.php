@@ -8,17 +8,22 @@
         id INT PRIMARY KEY AUTO_INCREMENT,
         nome VARCHAR(100),
         genero VARCHAR(50),
-        nota INT,
-        ano_lancamento INT
+        nota INT
     )";
 
-    // exec() = executa algo quando você NÃO precisa receber registros de volta.
     $pdo->exec($sql);
 
     $nome = "";
     $genero = "";
     $nota = "";
     $ano_lancamento = "";
+    
+    $sql_alter = 
+    "ALTER TABLE jogos 
+    ADD ano_lancamento INT;
+    ";
+
+    $pdo->exec($sql_alter);
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
         $nome = $_POST["nome"];
@@ -26,7 +31,7 @@
         $nota = $_POST["nota"];
         $ano_lancamento = $_POST["ano_lancamento"];
 
-        $sql_inserir = "INSERT INTO jogos (nome,genero,nota,ano_lancamento) VALUES ('$nome','$genero','$nota','$ano_lancamento')";
+        $sql_inserir = "INSERT INTO jogos (nome,genero,nota) VALUES ('$nome','$genero','$nota')";
 
         $pdo->exec($sql_inserir);
 
@@ -36,6 +41,7 @@
 
 $buscar = "SELECT * FROM jogos";
 
+// exec() = executa algo quando você NÃO precisa receber registros de volta.
 // query() = executa uam consulta quando você QUER receber dados de volta.
 $stmt = $pdo->query($buscar);
 
