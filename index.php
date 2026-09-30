@@ -1,7 +1,7 @@
 <?php
     require "conexao.php";
 
-    echo "<br>Meu sistema está conectado!";
+    echo "<br>Meu sistema está conectado!<br>";
 
     $sql = "CREATE TABLE IF NOT EXISTS teste (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -11,7 +11,7 @@
 
     $pdo->exec($sql);
 
-    echo "<br>Tabela criada com sucesso!";
+    echo "<br>Tabela criada com sucesso!<br>";
 
 ?>
 <!DOCTYPE html>
