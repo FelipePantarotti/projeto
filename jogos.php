@@ -15,16 +15,24 @@
     $pdo->exec($sql);
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
+        $usuario = $_POST["usuario"];
+        $senha = $_POST["senha"];
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
         $ano_lancamento = $_POST["ano_lancamento"];
 
-        $sql_inserir = "INSERT INTO jogos (nome,genero,nota,ano_lancamento) VALUES ('$nome','$genero','$nota','$ano_lancamento')";
+        if ($usuario == "alunosenai" && $senha == "senhasenai"){
 
-        $pdo->exec($sql_inserir);
+            $sql_inserir = "INSERT INTO jogos (nome,genero,nota,ano_lancamento) VALUES ('$nome','$genero','$nota','$ano_lancamento')";
 
-        echo "Jogo cadastrado!";
+            $pdo->exec($sql_inserir);
+
+            echo "Jogo cadastrado!";
+        }
+        else {
+            echo "Erro! Usuário ou senha incorretos. Não foi possível cadastrar o jogo";
+        }
 
     }
 
@@ -48,6 +56,8 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 <div class="container">
     <form method="POST">
+        <input type="text" id="usuario" name="usuario" placeholder="Digite o usuário"> <br><br>    
+        <input type="text" id="senha" name="senha" placeholder="Digite a senha"> <br><br>
         <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo"> <br><br>
         <input type="text" id="genero" name="genero" placeholder="Digite o gênero do jogo"> <br><br>
         <input type="number" id="nota" name="nota" placeholder="Digite a nota do jogo"> <br><br>
