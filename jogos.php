@@ -68,7 +68,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </form>
 
     <?php if ($mensagem != "") { ?>
-        <p style="text-align: center; font-weight: bold; color: red;">
+        <p>
             <?= $mensagem ?>
         </p>
     <?php } ?>
