@@ -28,7 +28,7 @@
         $nota = $_POST["nota"];
         $ano_lancamento = $_POST["ano_lancamento"];
 
-        $sql_inserir = "INSERT INTO jogos (nome,genero,nota) VALUES ('$nome','$genero','$nota')";
+        $sql_inserir = "INSERT INTO jogos (nome,genero,nota,ano_lancamento) VALUES ('$nome','$genero','$nota','$ano_lancamento')";
 
         $pdo->exec($sql_inserir);
 
