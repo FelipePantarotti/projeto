@@ -2,7 +2,7 @@
 
     require "conexao.php";
 
-    echo "<br>Cadastro de jogos";
+    $mensagem = "";
 
     $sql = "CREATE TABLE IF NOT EXISTS jogos (
         id INT PRIMARY KEY AUTO_INCREMENT,
@@ -28,10 +28,10 @@
 
             $pdo->exec($sql_inserir);
 
-            echo "Jogo cadastrado!";
+            $mensagem = "Jogo cadastrado!";
         }
         else {
-            echo "Erro! Usuário ou senha incorretos. Não foi possível cadastrar o jogo";
+            $mensagem = "Erro! Usuário ou senha incorretos. Não foi possível cadastrar o jogo";
         }
 
     }
@@ -86,6 +86,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?= $jogo["nota"] ?></td>
                 <td><?= $jogo["ano_lancamento"] ?></td>
             </tr>
+            <?= $mensagem ?>
         <?php } ?>
 
     </table>
