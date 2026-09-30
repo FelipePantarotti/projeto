@@ -1,20 +1,19 @@
-<div style="text-align: center; margin-bottom: 20px;">
-    <?php
-        require "conexao.php";
+<?php
+    require "conexao.php";
 
-         echo "<br>Meu sistema está conectado!<br>";
+    echo "<br>Meu sistema está conectado!<br>";
 
-        $sql = "CREATE TABLE IF NOT EXISTS teste (
-                id INT AUTO_INCREMENT PRIMARY KEY,
-                nome VARCHAR(100),
-                idade INT
-            )";
+    $sql = "CREATE TABLE IF NOT EXISTS teste (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        nome VARCHAR(100),
+        idade INT
+    )";
 
-        $pdo->exec($sql);
+    $pdo->exec($sql);
 
-        echo "Tabela criada com sucesso!<br>";
-        ?>
-</div>
+    echo "<br>Tabela criada com sucesso!<br>";
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
