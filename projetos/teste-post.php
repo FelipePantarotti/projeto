@@ -1,6 +1,6 @@
 <?php
 echo "metodo recebido: ";
-echo $_SERVER[$REQUEST_METHOD];
+echo $_SERVER["$REQUEST_METHOD"];
 
 echo "\n\n dados recebidos pelo POST:\n";
 
