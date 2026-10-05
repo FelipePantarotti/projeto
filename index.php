@@ -124,7 +124,7 @@
                             <span>CSS</span>
                             <span>PHP</span>
                         </div>
-                        <a href="projetos/idade.php" class="link-projeto">
+                        <a href="projetos/notas.php" class="link-projeto">
                             Ver projeto ⮕
                         </a>
                      </div>
@@ -144,7 +144,7 @@
                             <span>CSS</span>
                             <span>PHP</span>
                         </div>
-                        <a href="projetos/idade.php" class="link-projeto">
+                        <a href="projetos/login-basico.php" class="link-projeto">
                             Ver projeto ⮕
                         </a>
                      </div>
@@ -164,14 +164,14 @@
                             <span>CSS</span>
                             <span>PHP</span>
                         </div>
-                        <a href="projetos/idade.php" class="link-projeto">
+                        <a href="projetos/jogos.php" class="link-projeto">
                             Ver projeto ⮕
                         </a>
                      </div>
                 </div>
             </section>
 
-            <section id=contato class="secao secap-destaque">
+            <section id=contato class="secao secao-destaque">
                 <h2 class="titulo-secao">Contato</h2>
                 <p class="subtitulo-secao">
                     Quer entrar em contato comigo?
