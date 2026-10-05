@@ -116,7 +116,7 @@
                         </div>
                         <h3>Verificador de notas</h3>
                         <p>
-                            Aplicação simples criada para praticar manipulação de 
+                            Aplicação simples, criada para praticar manipulação de 
                             formulários, cálculos e validação de dados.
                         </p>
                         <div class="tecnologia">
@@ -189,5 +189,11 @@
             </section>
         </section>
     </main>
+
+    <footer>
+        <p>
+            Desenvolvido por <a href="felipeg315.devlook.xyz">Felipe Pantarotti</a> • 2026
+        </p>
+    </footer>
 </body>
 </html>
