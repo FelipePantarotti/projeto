@@ -24,10 +24,10 @@
 </head>
 <body>
     <div class="container">
-        <a href="idade.php" class="bt-voltar">Verificador de idade</a><br><br>
-        <a href="notas.php" class="bt-voltar">Verificador de notas</a><br><br>
-        <a href="login-basico.php" class="bt-voltar">Login básico</a><br><br>
-        <a href="jogos.php" class="bt-voltar">Cadastro de jogos</a>
+        <a href="projetos/idade.php" class="bt-voltar">Verificador de idade</a><br><br>
+        <a href="projetos/notas.php" class="bt-voltar">Verificador de notas</a><br><br>
+        <a href="projetos/login-basico.php" class="bt-voltar">Login básico</a><br><br>
+        <a href="projetos/jogos.php" class="bt-voltar">Cadastro de jogos</a>
     </div>
 </body>
 </html>
