@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 html {
@@ -8,15 +8,16 @@ html {
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    color: #222222;
-    line-height: 1.6;
+    background-color: #f7f7f8;
+    color: #202024;
+    line-height: 1.7;
 }
 header {
-    background-color: #3f3f46;
+    background-color: #111114;
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid #29292f;
 }
 .navbar {
     max-width: 1100px;
@@ -28,74 +29,84 @@ header {
 }
 .logo {
     color: white;
+    letter-spacing: 1px;
 }
 .menu {
     display: flex;
     gap: 25px;
     list-style: none;
 }
-
 .menu a {
-    color: #e4e4e7
+    color: #d4d4d8;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 .menu a:hover {
-    color: #a1a1aa;
+    color: #c4a7ff;
 }
 .inicio {
     min-height: 85vh;
     display: flex;
     align-items: center;
-    background-color: #3f3f46;
+    background: radial-gradient(ellipse at 78% 45%, #302344 0%, #1a1720 34%, #111114 75%);
     color: white;
 }
 .inicio-conteudo {
     width: 1100px;
     max-width: 90%;
     margin: auto;
+    padding: 70px 0;
 }
 .saudacao {
-    color: #a1a1aa;
+    color: #c4a7ff;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 .inicio h1 {
     font-size: 60px;
-    margin-bottom: 5px;
+    line-height: 1.12;
+    margin-bottom: 12px;
 }
 .inicio h2 {
     font-size: 30px;
-    color: #aaaaaa;
+    color: #c4c4cc;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 .inicio-conteudo > p {
     max-width: 600px;
+    color: #dedee3;
 }
 .botao {
     display: inline-block;
     margin-top: 30px;
     padding: 12px 25px;
-    background-color: #52525b;
+    background-color: #8b5cf6;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 7px;
     font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .botao:hover {
-    background-color: #3f3f46;
+    background-color: #7444df;
+    transform: translateY(-2px);
 }
 .secao {
     max-width: 1100px;
     margin: auto;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 .titulo-secao {
     font-size: 35px;
     text-align: center;
     margin-bottom: 10px;
+    color: #17171b;
 }
 .subtitulo-secao {
     text-align: center;
-    color: #666666;
+    color: #71717a;
     margin-bottom: 40px;
 }
 .sobre-conteudo {
@@ -109,24 +120,29 @@ header {
     height: 200px;
     min-width: 200px;
     border-radius: 50%;
-    background-color: #52525b;
+    background: linear-gradient(145deg, #8b5cf6, #393044);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 60px;
     font-weight: bold;
+    box-shadow: 0 12px 35px rgba(73, 48, 112, 0.2);
 }
 .sobre-texto h3 {
     font-size: 25px;
     margin-bottom: 15px;
+    color: #202024;
 }
 .sobre-texto p {
     margin-bottom: 15px;
+    color: #52525b;
 }
-.secao-destaque{
+.secao-destaque {
     max-width: 100%;
-    background-color: #f1f1f2;
+    background-color: #ededf0;
+    border-top: 1px solid #e2e2e6;
+    border-bottom: 1px solid #e2e2e6;
 }
 .secao-destaque > * {
     max-width: 1100px;
@@ -140,14 +156,18 @@ header {
     gap: 15px;
 }
 .habilidade {
-    background-color: white;
+    background-color: #fff;
+    color: #303036;
     padding: 15px 25px;
+    border: 1px solid #dedee3;
     border-radius: 8px;
     font-weight: bold;
-    box-shadow: 0 2px 8 rgba(0, 0, 0, 0.10);
+    box-shadow: 0 4px 14px rgba(20, 20, 25, 0.05);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 .habilidade:hover {
     transform: translateY(-3px);
+    border-color: #a78bfa;
 }
 .projetos-container {
     display: grid;
@@ -157,26 +177,29 @@ header {
 .projeto-card {
     background-color: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    border: 1px solid #e5e5e9;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
     transition: 0.3s;
 }
 .projeto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: #c4b5fd;
+    box-shadow: 0 12px 28px rgba(57, 42, 83, 0.12);
 }
 .projeto-numero {
     font-size: 35px;
     font-weight: bold;
-    color: #52525b;
+    color: #8b5cf6;
     margin-bottom: 15px;
 }
 .projeto-card h3 {
     font-size: 22px;
     margin-bottom: 10px;
+    color: #202024;
 }
 .projeto-card p {
-    color: #555555;
+    color: #62626b;
     margin-bottom: 20px;
 }
 .tecnologias {
@@ -186,19 +209,20 @@ header {
     margin-bottom: 20px;
 }
 .tecnologias span {
-    background-color: #e4e4e7;
-    color: #3f3f46;
+    background-color: #f0ebff;
+    color: #6842b8;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 13px;
     font-weight: bold;
 }
 .link-projeto {
-    color: #52525b;
+    color: #7047c7;
     text-decoration: none;
     font-weight: bold;
 }
 .link-projeto:hover {
+    color: #4f2c9c;
     text-decoration: underline;
 }
 .contato-container {
@@ -212,18 +236,20 @@ header {
     width: 280px;
     padding: 25px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    border: 1px solid #e5e5e9;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
 }
 .contato-item h3 {
-    color: #52525b;
+    color: #7047c7;
     margin-bottom: 5px;
 }
 footer {
-    background-color: #3f3f46;
-    color: #cccccc;
+    background-color: #111114;
+    color: #c4c4cc;
     text-align: center;
     padding: 30px;
+    border-top: 1px solid #29292f;
 }
 @media (max-width: 800px) {
     .navbar {
