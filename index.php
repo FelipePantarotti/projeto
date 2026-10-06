@@ -79,6 +79,9 @@
                 <div class="habilidade">
                     PHP
                 </div>
+                <div class="habilidade">
+                    JAVA SCRIPT
+                </div>
             </div>
         </section>
 
