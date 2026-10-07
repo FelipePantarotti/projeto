@@ -65,7 +65,21 @@
     }
 
     if ($acao === "deletar"){
-        
+
+        // PEGAR O NOME QUE QUEREMOS DELETAR
+        $nome = $_POST["nome"];
+
+        // PERCORRER TODOS OS ALUNOS
+        foreach($alunos as $posicao -> $aluno){
+
+            if ($aluno["nome"] === $nome){
+                // DELETAR O ALUNO DO ARRAY
+                unset($alunos[$posicao]);
+            }
+        }
+
+        // REORGANIZAR AS POSIÇÕES DO ARRAY
+        $alunos = array_values($alunos);
 
     }
 }
