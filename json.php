@@ -9,28 +9,29 @@
     // 3. TRANSFORMAR JSON EM ARRAY PHP
     $alunos = json_decode($json, true);
 
-    // 4. CRIAR UM ALUNO
-    $novoAluno = [
-        "nome" => "Felipe",
-        "idade" => "16",
-        "curso" => "Desenvolvimento de Sistemas"
-    ];
+    if ($_SERVER["REQUEST_METHOD"]){
+        // 4. CRIAR UM ALUNO
+        $novoAluno = [
+            "nome" => $_POST["nome"],
+            "idade" => $_POST["idade"],
+            "curso" => $_POST["curso"]
+        ];
 
-    // 5. ADICIONAR O ALUNO NO ARRAY
-    $alunos[] = $novoAluno;
+        // 5. ADICIONAR O ALUNO NO ARRAY
+        $alunos[] = $novoAluno;
 
-    // 6. TRANSFORMAR ARRAY PHP EM JSON
-    $jsonAtualizado = json_encode($alunos,
-        JSON_PRETTY_PRINT | 
-        JSON_UNESCAPED_UNICODE
-    );
+        // 6. TRANSFORMAR ARRAY PHP EM JSON
+        $jsonAtualizado = json_encode($alunos,
+            JSON_PRETTY_PRINT | 
+            JSON_UNESCAPED_UNICODE
+        );
 
-    // 7. SALVAR NO ARQUIVO
-    file_put_contents($caminho, 
-    $jsonAtualizado);
+        // 7. SALVAR NO ARQUIVO
+        file_put_contents($caminho, 
+        $jsonAtualizado);
 
-    echo "DADOS REGISTRADOS EM dados.json"
-
+        echo "DADOS REGISTRADOS EM dados.json";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -40,6 +41,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form method="POST">
+        <label for>Nome:</label>
+        <input type="text" name="nome">
+
+        <label for>Idade:</label>
+        <input type="number" name="idade">
+
+        <label for>Curso:</label>
+        <input type="text" name="curso">
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
