@@ -9,7 +9,7 @@
     // 3. TRANSFORMAR JSON EM ARRAY PHP
     $alunos = json_decode($json, true);
 
-    if ($_SERVER["REQUEST_METHOD"]){
+    if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
         $acao = $_POST["acao"];
         
@@ -62,6 +62,11 @@
 
         // SALVAR NO ARQUIVO
         file_put_contents($caminho, $jsonAtualizado);
+    }
+
+    if ($acao === "deletar"){
+        
+
     }
 }
 
