@@ -10,6 +10,11 @@
     $alunos = json_decode($json, true);
 
     if ($_SERVER["REQUEST_METHOD"]){
+
+        $acao = $_POST["acao"];
+        
+        if($acao === "cadastrar"){
+
         // 4. CRIAR UM ALUNO
         $novoAluno = [
             "nome" => $_POST["nome"],
@@ -30,8 +35,35 @@
         file_put_contents($caminho, 
         $jsonAtualizado);
 
-        echo "DADOS REGISTRADOS EM dados.json";
+        
     }
+
+    if($acao === "atualizar"){
+
+        // PEGAR OS DADOS DO FORMULÁRIO
+        $nome = $_POST["nome"];
+        $novaIdade = $_POST["idade"];
+        $novoCurso = $_POST["curso"];
+
+        // PERCORRER TODOS OS ALUNOS
+        foreach($alunos as $posicao => $aluno){
+            if($aluno["nome"] == $nome){
+                $alunos[$posicao]["idade"] = $novaIdade;
+                $alunos[$posicao]["curso"] = $novoCurso;
+
+            }
+        }
+
+        // TRANSFORMAR ARRAY PHP EM JSON
+        $jsonAtualizado = json_encode(
+            $alunos,
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+        );
+
+        // SALVAR NO ARQUIVO
+        file_put_contents($caminho, $jsonAtualizado);
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -42,6 +74,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>CADASTRAR ALUNOS</h2>
     <form method="POST">
         <label for>Nome:</label>
         <input type="text" name="nome">
@@ -51,7 +84,7 @@
 
         <label for>Curso:</label>
         <input type="text" name="curso">
-        <button type="submit">Enviar</button>
+        <button type="submit" name ="acao" value="cadastrar">Cadastrar</button>
     </form>
 
     <h2>ALUNOS CADASTRADOS</h2>
@@ -60,5 +93,18 @@
     <p>Idade: <?= $aluno["idade"] ?></p>
     <p>Curso: <?= $aluno["curso"] ?></p>
     <?php } ?>
+
+    <form method="POST">
+        <label for>Nome:</label>
+        <input type="text" name="nome">
+
+        <label for>Idade:</label>
+        <input type="number" name="idade">
+
+        <label for>Curso:</label>
+        <input type="text" name="curso">
+        <button type="submit" name ="acao" value="atualizar">Atualizar</button>
+    </form>
+
 </body>
 </html>
