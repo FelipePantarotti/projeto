@@ -28,9 +28,9 @@
                 <p class="saudacao">Olá! Eu sou</p>
                 <h1>Felipe Pantarotti</h1>
                 <h2>Desenvolvedor em formação</h2>
-                <p>Sou estudante de desenvolvimento de sistemas,
-                    Em busca de oportunidades para aplicar
-                    meus conhecimentos em projetos reais.
+                <p>Estou em constante aprendizado na área de desenvolvimento de sistemas. 
+                    Busco aprimorar minhas habilidades em programação, 
+                    desenvolver soluções criativas e transformar ideias em projetos funcionais.
                 </p>
 
                 <a href="#projetos" class="botao">
@@ -48,17 +48,11 @@
                 <div class="sobre-texto">
                     <h3>Quem sou eu?</h3>
                     <p>
-                        Meu nome é Felipe e sou estudante
-                        de Desenvolvimento de sistemas.
-                    </p>
-                    <p>
-                        Atualmente estou estudando desenvolvimento 
-                        web, programação e criação de sistemas.
-                        Este portfólio reúne alguns dos projetos
-                        desenvolvidos por mim.
-                    </p>
-                    <p>Meu objetivo é continuar evoluindo como
-                        desenvolvedor e aprender novas tecnologias.
+                        Meu nome é Felipe Pantarotti e sou estudante de Desenvolvimento de Sistemas, com foco em programação e desenvolvimento web.
+                        Estou sempre buscando aprender novas tecnologias, aperfeiçoar minhas habilidades e colocar meus conhecimentos em prática 
+                        por meio de projetos que envolvam lógica de programação, criação de interfaces e desenvolvimento de sistemas.
+                        Este portfólio reúne alguns dos meus projetos, minha evolução como desenvolvedor e minha dedicação em construir soluções cada vez melhores. 
+                        Estou em busca de oportunidades para adquirir experiência, colaborar com equipes e crescer profissionalmente na área de tecnologia.
                     </p>
                 </div>
             </div>
