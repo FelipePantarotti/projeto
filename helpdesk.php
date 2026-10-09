@@ -117,7 +117,7 @@
                         
                         <select name="status">
                             <option value="Aberto" <?php if($chamado['status'] == 'Aberto') echo 'selected'; ?>>Aberto</option>
-                            <option value="Em andamento" <?php if($chamado['status'] == 'Resolvendo') echo 'selected'; ?>>Em andamento</option>
+                            <option value="Em andamento" <?php if($chamado['status'] == 'Em andamento') echo 'selected'; ?>>Em andamento</option>
                             <option value="Resolvido" <?php if($chamado['status'] == 'Resolvido') echo 'selected'; ?>>Resolvido</option>
                         </select>
                         <button type="submit">OK</button>

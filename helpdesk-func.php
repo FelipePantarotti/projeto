@@ -22,7 +22,7 @@
     function cadastrarChamados($nome, $setor, 
     $equipamento, $descricao, $prioridade){
 
-        if (empty($nome) || empty($descricao)){
+        if (!empty($nome) && !empty($descricao)){
             $chamados = lerChamados();
 
             $novoChamado = [
@@ -72,19 +72,19 @@
     function gerarRelatorio($chamados){
         $total = count($chamados);
         $abertos = 0;
-        $resolvendo = 0;
+        $emAndamento = 0;
         $resolvidos = 0;
 
         foreach ($chamados as $chamado){
             if ($chamado["status"] == "Aberto") $abertos++;
-            if ($chamado["status"] == "Resolvendo") $resolvendo++;
+            if ($chamado["status"] == "Resolvendo") $emAndamento++;
             if ($chamado["status"] == "Resolvido") $resolvidos++;
         }
 
         return [
             "total" => $total,
             "abertos" => $abertos,
-            "resolvendo" => $resolvendo,
+            "resolvendo" => $emAndamento,
             "resolvidos" => $resolvidos
         ];
     }
