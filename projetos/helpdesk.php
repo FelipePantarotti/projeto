@@ -133,6 +133,8 @@
         <p>Resolvido: <?php echo $relatorio["resolvidos"]; ?></p>
     </div>
 
+    <a href="../index.php" class="bt-voltar">Voltar ao início</a>
+
 
 </body>
 </html>
