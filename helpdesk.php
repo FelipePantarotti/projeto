@@ -110,9 +110,7 @@
                 <td><?php echo $chamado['descricao']; ?></td>
                 <td><?php echo $chamado['prioridade']; ?></td>
                 
-                <!-- Coluna: Atualizar Status -->
                 <td>
-                    <!-- Um mini formulário para cada linha -->
                     <form method="POST">
                         <input type="hidden" name="acao" value="atualizar">
                         <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
@@ -126,9 +124,7 @@
                     </form>
                 </td>
 
-                <!-- Coluna: Excluir -->
                 <td>
-                    <!-- Outro mini formulário para o botão de excluir -->
                     <form method="POST">
                         <input type="hidden" name="acao" value="excluir">
                         <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
@@ -139,6 +135,13 @@
         <?php } ?>
     </tbody>    
 
+    <div>
+        <h3>Relatório de Atendimentos</h3>
+        <p>Total de chamados: <?php echo $relatorio["total"]; ?></p>
+        <p>Abertos: <?php echo $relatorio["abertos"]; ?></p>
+        <p>Sendo resolvidos: <?php echo $relatorio["em_andamento"]; ?></p>
+        <p>Resolvido: <?php echo $relatorio["resolvidos"]; ?></p>
+    </div>
 
 
 </body>
