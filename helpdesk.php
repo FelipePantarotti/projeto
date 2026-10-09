@@ -2,7 +2,40 @@
 
     require_once "helpdesk-func.php";
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $acao = $_POST["acao"];
 
+        if ($acao == "cadastrar"){
+            $nome = $_POST["nome"] ?? "";
+            $setor = $_POST["setor"] ?? "";
+            $equipamento = $_POST["equipamento"] ?? "";
+            $descricao = $_POST["descricao"] ?? "";
+            $prioridade = $_POST["prioridade"] ?? "";
+
+            cadastrarChamados($nome, $setor, $equipamento, $descricao, $prioridade);
+        } 
+
+        else if ($acao == "atualizar"){
+            $posicao = $_POST["posicao"] ?? null;
+            $novoStatus = $_POST["status"] ?? "";
+
+            if ($posicao !== null){
+                atualizarStatusChamado($posicao, $novoStatus);
+            }
+        }           
+
+        else if ($acao == "exluir"){
+            $posicao = $_POST["posicao"] ?? null;
+
+            if ($posicao !== null){
+                excluirChamado($posicao);
+            }
+        }
+    }
+
+    $chamados = lerChamados();
+
+    $relatorio = gerarRelatorio($chamados);
 
 ?>
 
@@ -66,5 +99,47 @@
             <th>Excluir Chamado</th>
         </tr>
     </table>
+
+    <tbody>
+        <?php foreach($chamados as $posicao => $chamado){ ?>
+            <tr>
+                <td><?php echo $posicao; ?></td>
+                <td><?php echo $chamado['nome']; ?></td>
+                <td><?php echo $chamado['setor']; ?></td>
+                <td><?php echo $chamado['equipamento']; ?></td>
+                <td><?php echo $chamado['descricao']; ?></td>
+                <td><?php echo $chamado['prioridade']; ?></td>
+                
+                <!-- Coluna: Atualizar Status -->
+                <td>
+                    <!-- Um mini formulário para cada linha -->
+                    <form method="POST">
+                        <input type="hidden" name="acao" value="atualizar">
+                        <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
+                        
+                        <select name="status">
+                            <option value="Aberto" <?php if($chamado['status'] == 'Aberto') echo 'selected'; ?>>Aberto</option>
+                            <option value="Em andamento" <?php if($chamado['status'] == 'Em andamento') echo 'selected'; ?>>Em andamento</option>
+                            <option value="Resolvido" <?php if($chamado['status'] == 'Resolvido') echo 'selected'; ?>>Resolvido</option>
+                        </select>
+                        <button type="submit">OK</button>
+                    </form>
+                </td>
+
+                <!-- Coluna: Excluir -->
+                <td>
+                    <!-- Outro mini formulário para o botão de excluir -->
+                    <form method="POST">
+                        <input type="hidden" name="acao" value="excluir">
+                        <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        <?php } ?>
+    </tbody>    
+
+
+
 </body>
 </html>
