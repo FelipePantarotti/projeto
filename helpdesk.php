@@ -91,11 +91,11 @@
         <?php foreach($chamados as $posicao => $chamado){ ?>
             <tr>
                 <td><?php echo $posicao; ?></td>
-                <td>Nome:<?php echo $chamado['nome']; ?></td>
-                <td>Setor<?php echo $chamado['setor']; ?></td>
-                <td>Equipamento<?php echo $chamado['equipamento']; ?></td>
-                <td>Descrição<?php echo $chamado['descricao']; ?></td>
-                <td>Prioridade<?php echo $chamado['prioridade']; ?></td>
+                <td>Nome:<br> <?php echo $chamado['nome']; ?></td>
+                <td>Setor:<br> <?php echo $chamado['setor']; ?></td>
+                <td>Equipamento:<br> <?php echo $chamado['equipamento']; ?></td>
+                <td>Descrição:<br> <?php echo $chamado['descricao']; ?></td>
+                <td>Prioridade:<br> <?php echo $chamado['prioridade']; ?></td>
                 
                 <td>
                     <form method="POST">
