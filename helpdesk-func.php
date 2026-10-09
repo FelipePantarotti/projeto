@@ -84,7 +84,7 @@
         return [
             "total" => $total,
             "abertos" => $abertos,
-            "resolvendo" => $emAndamento,
+            "emAndamento" => $emAndamento,
             "resolvidos" => $resolvidos
         ];
     }
