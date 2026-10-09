@@ -77,7 +77,7 @@
 
         foreach ($chamados as $chamado){
             if ($chamado["status"] == "Aberto") $abertos++;
-            if ($chamado["status"] == "Resolvendo") $emAndamento++;
+            if ($chamado["status"] == "Em andamento") $emAndamento++;
             if ($chamado["status"] == "Resolvido") $resolvidos++;
         }
 

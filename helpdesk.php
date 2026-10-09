@@ -87,28 +87,15 @@
     </form>
 
     <h2>Lista Dos Chamados</h2>
-    <table>
-        <tr>
-            <th>N°</th>
-            <th>Solicitante</th>
-            <th>Setor</th>
-            <th>Equipamento</th>
-            <th>Descrição</th>
-            <th>Prioridade</th>
-            <th>Status / Atualizar</th>
-            <th>Excluir Chamado</th>
-        </tr>
-    </table>
-
     <tbody>
         <?php foreach($chamados as $posicao => $chamado){ ?>
             <tr>
                 <td><?php echo $posicao; ?></td>
-                <td><?php echo $chamado['nome']; ?></td>
-                <td><?php echo $chamado['setor']; ?></td>
-                <td><?php echo $chamado['equipamento']; ?></td>
-                <td><?php echo $chamado['descricao']; ?></td>
-                <td><?php echo $chamado['prioridade']; ?></td>
+                <td>Nome:<?php echo $chamado['nome']; ?></td>
+                <td>Setor<?php echo $chamado['setor']; ?></td>
+                <td>Equipamento<?php echo $chamado['equipamento']; ?></td>
+                <td>Descrição<?php echo $chamado['descricao']; ?></td>
+                <td>Prioridade<?php echo $chamado['prioridade']; ?></td>
                 
                 <td>
                     <form method="POST">
@@ -139,7 +126,7 @@
         <h3>Relatório de Atendimentos</h3>
         <p>Total de chamados: <?php echo $relatorio["total"]; ?></p>
         <p>Abertos: <?php echo $relatorio["abertos"]; ?></p>
-        <p>Sendo resolvidos: <?php echo $relatorio["em_andamento"]; ?></p>
+        <p>Em andamento: <?php echo $relatorio["em_andamento"]; ?></p>
         <p>Resolvido: <?php echo $relatorio["resolvidos"]; ?></p>
     </div>
 
