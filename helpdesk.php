@@ -87,40 +87,42 @@
     </form>
 
     <h2>Lista Dos Chamados</h2>
-    <tbody>
-        <?php foreach($chamados as $posicao => $chamado){ ?>
-            <tr>
-                <td><?php echo $posicao; ?></td>
-                <td>Nome:<br> <?php echo $chamado['nome']; ?></td>
-                <td>Setor:<br> <?php echo $chamado['setor']; ?></td>
-                <td>Equipamento:<br> <?php echo $chamado['equipamento']; ?></td>
-                <td>Descrição:<br> <?php echo $chamado['descricao']; ?></td>
-                <td>Prioridade:<br> <?php echo $chamado['prioridade']; ?></td>
-                
-                <td>
-                    <form method="POST">
-                        <input type="hidden" name="acao" value="atualizar">
-                        <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
-                        
-                        <select name="status">
-                            <option value="Aberto" <?php if($chamado['status'] == 'Aberto') echo 'selected'; ?>>Aberto</option>
-                            <option value="Em andamento" <?php if($chamado['status'] == 'Em andamento') echo 'selected'; ?>>Em andamento</option>
-                            <option value="Resolvido" <?php if($chamado['status'] == 'Resolvido') echo 'selected'; ?>>Resolvido</option>
-                        </select>
-                        <button type="submit">OK</button>
-                    </form>
-                </td>
+    <table>
+        <tbody>
+            <?php foreach($chamados as $posicao => $chamado){ ?>
+                <tr>
+                    <td><?php echo $posicao; ?></td>
+                    <td>Nome:<br> <?php echo $chamado['nome']; ?></td>
+                    <td>Setor:<br> <?php echo $chamado['setor']; ?></td>
+                    <td>Equipamento:<br> <?php echo $chamado['equipamento']; ?></td>
+                    <td>Descrição:<br> <?php echo $chamado['descricao']; ?></td>
+                    <td>Prioridade:<br> <?php echo $chamado['prioridade']; ?></td>
+                    
+                    <td>
+                        <form method="POST">
+                            <input type="hidden" name="acao" value="atualizar">
+                            <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
+                            
+                            <select name="status">
+                                <option value="Aberto" <?php if($chamado['status'] == 'Aberto') echo 'selected'; ?>>Aberto</option>
+                                <option value="Em andamento" <?php if($chamado['status'] == 'Em andamento') echo 'selected'; ?>>Em andamento</option>
+                                <option value="Resolvido" <?php if($chamado['status'] == 'Resolvido') echo 'selected'; ?>>Resolvido</option>
+                            </select>
+                            <button type="submit">OK</button>
+                        </form>
+                    </td>
 
-                <td>
-                    <form method="POST">
-                        <input type="hidden" name="acao" value="excluir">
-                        <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
-                        <button type="submit">Excluir</button>
-                    </form>
-                </td>
-            </tr>
-        <?php } ?>
-    </tbody>    
+                    <td>
+                        <form method="POST">
+                            <input type="hidden" name="acao" value="excluir">
+                            <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
+                            <button type="submit">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>  
 
     <div>
         <h3>Relatório de Atendimentos</h3>
