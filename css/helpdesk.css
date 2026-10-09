@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f8;
+    color: #202024;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+body > form {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e9;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #303036;
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #202024;
+    background-color: #fafafa;
+    border: 1px solid #dedee3;
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8b5cf6;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #7444df;
+    transform: translateY(-2px);
+}
+
+h2 {
+    max-width: 1200px;
+    margin: 0 auto 25px;
+    color: #17171b;
+    font-size: 32px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 50px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e9;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+    overflow: hidden;
+}
+
+td {
+    padding: 18px 14px;
+    border-bottom: 1px solid #e5e5e9;
+    color: #52525b;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f0ebff;
+}
+
+td:first-child {
+    color: #8b5cf6;
+    font-weight: bold;
+    text-align: center;
+}
+
+td form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+td select {
+    min-width: 130px;
+    margin-bottom: 0;
+    padding: 9px;
+    font-size: 13px;
+    background-color: #ffffff;
+}
+
+td button {
+    padding: 9px 13px;
+    white-space: nowrap;
+}
+
+.btn-excluir {
+    background-color: #dc2626;
+}
+
+.btn-excluir:hover {
+    background-color: #b91c1c;
+}
+
+body > div {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e9;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+}
+
+h3 {
+    margin-bottom: 18px;
+    color: #7047c7;
+    font-size: 24px;
+}
+
+body > div p {
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    background-color: #f7f4ff;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 5px;
+    color: #303036;
+}
+
+body > div p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    body > form {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 14px 12px;
+    }
+
+    td form {
+        gap: 6px;
+    }
+
+    body > div {
+        padding: 22px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    body > form {
+        padding: 20px 15px;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 14px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    body > div {
+        padding: 18px;
+    }
+}
