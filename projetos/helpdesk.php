@@ -84,6 +84,8 @@
         <input type="hidden" name="acao" value="cadastrar">
 
         <button type="submit">Enviar</button>
+        
+        <a href="../index.php" class="bt-voltar">Voltar ao início</a>
 
     </form>
 
@@ -132,8 +134,6 @@
         <p>Em andamento: <?php echo $relatorio["em_andamento"]; ?></p>
         <p>Resolvido: <?php echo $relatorio["resolvidos"]; ?></p>
     </div>
-
-    <a href="../index.php" class="bt-voltar">Voltar ao início</a>
 
 
 </body>
