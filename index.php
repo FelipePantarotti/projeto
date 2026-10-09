@@ -99,8 +99,10 @@
                         </div>
                         <h3>Verificação de Idade</h3>
                         <p>
-                            Sistema desenvolvido para praticar
-                            formulários e manipulação de dados.
+                            Aplicação web desenvolvida em PHP que verifica se uma pessoa é maior ou menor de idade 
+                            com base no nome e na idade informados pelo usuário. O projeto utiliza formulários HTML 
+                            e processamento de dados via método POST, aplicando estruturas condicionais para exibir o resultado dinamicamente. 
+                            Também conta com estilização em CSS para a interface.
                         </p>
                         <div class="tecnologia">
                             <span>HTML</span>
@@ -117,10 +119,12 @@
                         <div class="projeto-numero">
                             02
                         </div>
-                        <h3>Verificador de notas</h3>
+                        <h3>Verificador de notas escolares</h3>
                         <p>
-                            Aplicação simples, criada para praticar manipulação de 
-                            formulários, cálculos e validação de dados.
+                            Aplicação web desenvolvida em PHP para calcular a média ponderada de um aluno com base em cinco notas 
+                            e verificar sua situação acadêmica. O sistema considera a frequência escolar para determinar a aprovação, 
+                            recuperação ou reprovação, além de validar os dados informados e calcular quantos pontos faltam para atingir a média necessária. 
+                            A interface é estilizada com CSS e apresenta os resultados de forma dinâmica.
                         </p>
                         <div class="tecnologia">
                             <span>HTML</span>
@@ -137,10 +141,12 @@
                         <div class="projeto-numero">
                             03
                         </div>
-                        <h3>Login básico</h3>
+                        <h3>Sistema de login básico</h3>
                         <p>
-                            Verificação simples de login, com uma mensagem
-                            informando se o login está correto ou não.
+                            Aplicação web desenvolvida em PHP que simula um sistema de autenticação de usuários por meio de um formulário de login. 
+                            O sistema verifica as credenciais informadas, exibindo mensagens de sucesso quando os dados estão corretos ou alertas de erro quando são inválidos. 
+                            O projeto utiliza formulários HTML, processamento de dados via método POST, 
+                            estruturas condicionais em PHP e estilização com CSS para criar uma interface simples e funcional.
                         </p>
                         <div class="tecnologia">
                             <span>HTML</span>
@@ -166,6 +172,30 @@
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>PHP</span>
+                        </div>
+                        <a href="projetos/jogos.php" class="link-projeto">
+                            Ver projeto ⮕
+                        </a>
+                     </div>
+
+                     <!-- PROJETO 5 -->
+                     <div class="projeto-card">
+                        <div class="projeto-numero">
+                            05
+                        </div>
+                        <h3>Sistema Help Desk para Gerenciar Chamados</h3>
+                        <p>
+                            Aplicação web desenvolvida em PHP para registrar e gerenciar chamados de suporte técnico. O sistema permite cadastrar solicitações
+                             com informações como nome do solicitante, setor, equipamento afetado, descrição do problema e prioridade. Também oferece funcionalidades 
+                             para atualizar o status dos chamados, excluir registros e gerar relatórios com o total de solicitações abertas, em andamento e resolvidas. 
+                             Os dados são armazenados em um arquivo JSON, utilizando funções PHP para leitura, gravação e manipulação das informações, 
+                             com interface desenvolvida em HTML e CSS.
+                        </p>
+                        <div class="tecnologia">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>JSON</span>
                         </div>
                         <a href="projetos/jogos.php" class="link-projeto">
                             Ver projeto ⮕
