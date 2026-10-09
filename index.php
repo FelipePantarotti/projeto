@@ -99,10 +99,8 @@
                         </div>
                         <h3>Verificação de Idade</h3>
                         <p>
-                            Aplicação web desenvolvida em PHP que verifica se uma pessoa é maior ou menor de idade 
-                            com base no nome e na idade informados pelo usuário. O projeto utiliza formulários HTML 
-                            e processamento de dados via método POST, aplicando estruturas condicionais para exibir o resultado dinamicamente. 
-                            Também conta com estilização em CSS para a interface.
+                            Aplicação desenvolvida em PHP que verifica se uma pessoa é maior ou menor de idade 
+                            com base na idade informada, utilizando formulários HTML e estilização em CSS.
                         </p>
                         <div class="tecnologia">
                             <span>HTML</span>
@@ -121,10 +119,8 @@
                         </div>
                         <h3>Verificador de notas escolares</h3>
                         <p>
-                            Aplicação web desenvolvida em PHP para calcular a média ponderada de um aluno com base em cinco notas 
-                            e verificar sua situação acadêmica. O sistema considera a frequência escolar para determinar a aprovação, 
-                            recuperação ou reprovação, além de validar os dados informados e calcular quantos pontos faltam para atingir a média necessária. 
-                            A interface é estilizada com CSS e apresenta os resultados de forma dinâmica.
+                            Sistema em PHP que calcula a média ponderada de um aluno e determina sua situação escolar 
+                            com base nas notas e na frequência, exibindo os resultados dinamicamente.
                         </p>
                         <div class="tecnologia">
                             <span>HTML</span>
@@ -143,11 +139,8 @@
                         </div>
                         <h3>Sistema de login básico</h3>
                         <p>
-                            Aplicação web desenvolvida em PHP que simula um sistema de autenticação de usuários por meio de um formulário de login. 
-                            O sistema verifica as credenciais informadas, exibindo mensagens de sucesso quando os dados estão corretos ou alertas de erro quando são inválidos. 
-                            O projeto utiliza formulários HTML, processamento de dados via método POST, 
-                            estruturas condicionais em PHP e estilização com CSS para criar uma interface simples e funcional.
-                        </p>
+                            Aplicação em PHP que verifica as credenciais informadas pelo usuário 
+                            e exibe mensagens de sucesso ou erro, com interface estilizada em CSS.
                         <div class="tecnologia">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -165,8 +158,8 @@
                         </div>
                         <h3>Cadastro de jogos</h3>
                         <p>
-                            Conexão com banco de dados e criação de
-                            tabela com sql.
+                            Sistema desenvolvido em PHP e SQL para cadastrar e listar jogos eletrônicos, 
+                            armazenando informações como nome, gênero, nota e ano de lançamento.
                         </p>
                         <div class="tecnologia">
                             <span>HTML</span>
@@ -185,11 +178,8 @@
                         </div>
                         <h3>Sistema Help Desk para Gerenciar Chamados</h3>
                         <p>
-                            Aplicação web desenvolvida em PHP para registrar e gerenciar chamados de suporte técnico. O sistema permite cadastrar solicitações
-                             com informações como nome do solicitante, setor, equipamento afetado, descrição do problema e prioridade. Também oferece funcionalidades 
-                             para atualizar o status dos chamados, excluir registros e gerar relatórios com o total de solicitações abertas, em andamento e resolvidas. 
-                             Os dados são armazenados em um arquivo JSON, utilizando funções PHP para leitura, gravação e manipulação das informações, 
-                             com interface desenvolvida em HTML e CSS.
+                            Aplicação em PHP para gerenciar chamados de suporte técnico, permitindo cadastrar solicitações, 
+                            atualizar status, excluir registros e visualizar relatórios de atendimento com armazenamento em JSON.
                         </p>
                         <div class="tecnologia">
                             <span>HTML</span>
