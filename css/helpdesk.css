@@ -247,3 +247,6 @@ body > div p:last-child {
         padding: 18px;
     }
 }
+.bt-voltar { display: inline-flex; align-items: center; justify-content: center; align-self: flex-start; min-height: 44px; margin-top: 8px; padding: 10px 16px; color: #fff; background-color: #7047c7; border: 1px solid #7047c7; border-radius: 6px; font-size: 15px; font-weight: bold; text-decoration: none; transition: background-color .2s ease, border-color .2s ease, transform .2s ease; }
+.bt-voltar:hover { color: #fff; background-color: #4f2c9c; border-color: #4f2c9c; text-decoration: none; transform: translateY(-2px); }
+.bt-voltar:focus-visible { outline: 3px solid rgba(139, 92, 246, .35); outline-offset: 2px; }
