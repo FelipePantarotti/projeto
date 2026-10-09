@@ -95,7 +95,7 @@
                     <td>Nome:<br> <?php echo $chamado['nome']; ?></td>
                     <td>Setor:<br> <?php echo $chamado['setor']; ?></td>
                     <td>Equipamento:<br> <?php echo $chamado['equipamento']; ?></td>
-                    <td>Descrição:<br> <?php echo $chamado['descricao']; ?></td>
+                    <td>Descrição:<br> <?php echo nl2br ($chamado['descricao']); ?></td>
                     <td>Prioridade:<br> <?php echo $chamado['prioridade']; ?></td>
                     
                     <td>
