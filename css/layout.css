@@ -211,3 +211,6 @@ footer a:hover {
         padding: 25px;
     }
 }
+.voltar-projetos a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; color: #fff; background: #7047c7; border-radius: 6px; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
+.voltar-projetos a:hover { color: #fff; background: #4f2c9c; text-decoration: none; transform: translateY(-2px); }
+input:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid rgba(139, 92, 246, .35); outline-offset: 2px; }

@@ -202,13 +202,13 @@ header {
     color: #62626b;
     margin-bottom: 20px;
 }
-.tecnologias {
+.tecnologia {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 20px;
 }
-.tecnologias span {
+.tecnologia span {
     background-color: #f0ebff;
     color: #6842b8;
     padding: 5px 10px;
@@ -284,3 +284,10 @@ footer {
         max-width: 400px;
     }
 }
+/* Refinos visuais */
+.projeto-card { display: flex; flex-direction: column; }
+.projeto-card .link-projeto { align-self: flex-start; margin-top: auto; padding: 10px 16px; color: #fff; background: #7047c7; border-radius: 6px; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
+.projeto-card .link-projeto:hover { color: #fff; background: #4f2c9c; text-decoration: none; transform: translateY(-2px); }
+.botao { border-radius: 6px; }
+@media (min-width: 801px) { .projetos-container { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); } }
+@media (max-width: 600px) { .secao { padding: 65px 18px; } .inicio { min-height: 75vh; } .inicio h1 { font-size: clamp(34px, 10vw, 44px); } .projeto-card { padding: 24px; } }

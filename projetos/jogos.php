@@ -64,7 +64,7 @@ $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <input type="number" id="ano_lancamento" name="ano_lancamento" placeholder="Digite o ano do lançamento">
         <button type="submit">Enviar</button>
             
-        <a href="../index.php" class="bt-voltar">Voltar ao inicio</a>
+        <a href="../index.php" class="bt-voltar">Voltar ao início</a>
     </form>
 
     <?php if ($mensagem != "") { ?>

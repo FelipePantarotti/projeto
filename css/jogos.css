@@ -162,3 +162,6 @@ td {
         white-space: nowrap;
     }
 }
+.bt-voltar { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; color: #fff; background: #7047c7; border-radius: 6px; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
+.bt-voltar:hover { color: #fff; background: #4f2c9c; text-decoration: none; transform: translateY(-2px); }
+@media (max-width: 600px) { .container { padding: 25px 18px; } }

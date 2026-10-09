@@ -108,7 +108,7 @@
                             <span>PHP</span>
                         </div>
                         <a href="projetos/idade.php" class="link-projeto">
-                            Ver projeto ⮕
+                            Ver projeto
                         </a>
 
                      </div>
@@ -128,7 +128,7 @@
                             <span>PHP</span>
                         </div>
                         <a href="projetos/notas.php" class="link-projeto">
-                            Ver projeto ⮕
+                            Ver projeto
                         </a>
                      </div>
 
@@ -147,7 +147,7 @@
                             <span>PHP</span>
                         </div>
                         <a href="projetos/login-basico.php" class="link-projeto">
-                            Ver projeto ⮕
+                            Ver projeto
                         </a>
                      </div>
 
@@ -167,7 +167,7 @@
                             <span>PHP</span>
                         </div>
                         <a href="projetos/jogos.php" class="link-projeto">
-                            Ver projeto ⮕
+                            Ver projeto
                         </a>
                      </div>
 
@@ -188,7 +188,7 @@
                             <span>JSON</span>
                         </div>
                         <a href="projetos/jogos.php" class="link-projeto">
-                            Ver projeto ⮕
+                            Ver projeto
                         </a>
                      </div>
                 </div>

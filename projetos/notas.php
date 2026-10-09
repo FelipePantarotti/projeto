@@ -92,7 +92,7 @@ $frequencia = 0;
     <h2>Situação do aluno: <span class="<?= $resultado_class ?>"><?= $resultado ?></span></h2>
     <h2><?= $erro ?></h2>
 
-    <a href="../index.php" class="bt-voltar">Voltar ao inicio</a>
+    <a href="../index.php" class="bt-voltar">Voltar ao início</a>
 </div>
 </body>
 </html>
