@@ -31,7 +31,7 @@
                 "equipamento" => $equipamento,
                 "descricao" => $descricao,
                 "prioridade" => $prioridade,
-                "status" => "aberto"
+                "status" => "Aberto"
             ];
 
             $chamados[] = $novoChamado;
@@ -76,9 +76,9 @@
         $resolvidos = 0;
 
         foreach ($chamados as $chamado){
-            if ($chamado["status"] == "aberto") $abertos++;
-            if ($chamado["status"] == "resolvendo") $resolvendo++;
-            if ($chamado["status"] == "resolvido") $resolvidos++;
+            if ($chamado["status"] == "Aberto") $abertos++;
+            if ($chamado["status"] == "Resolvendo") $resolvendo++;
+            if ($chamado["status"] == "Resolvido") $resolvidos++;
         }
 
         return [
