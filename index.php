@@ -52,7 +52,7 @@
                         Estou sempre buscando aprender novas tecnologias, aperfeiçoar minhas habilidades e colocar meus conhecimentos em prática 
                         por meio de projetos que envolvam lógica de programação, criação de interfaces e desenvolvimento de sistemas.
                         Este portfólio reúne alguns dos meus projetos, minha evolução como desenvolvedor e minha dedicação em construir soluções cada vez melhores. 
-                        Estou em busca de oportunidades para adquirir experiência, colaborar com equipes e crescer profissionalmente na área de tecnologia.
+                        Estou em busca de oportunidades para adquirir experiência, colaborar com equipes e crescer profissionalmente na área de tecnologia. 
                     </p>
                 </div>
             </div>
