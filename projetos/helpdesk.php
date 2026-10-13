@@ -84,6 +84,8 @@
         <input type="hidden" name="acao" value="cadastrar">
 
         <button type="submit">Enviar</button>
+        
+        <a href="../index.php" class="bt-voltar">Voltar ao início</a>
 
     </form>
 
