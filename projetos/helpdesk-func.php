@@ -1,7 +1,7 @@
 <?php
 
 function lerChamados() {
-    $arquivo = "chamados.json";
+    $arquivo = __DIR__. "../dados/chamados.json";
 
     if (file_exists($arquivo)) {
         $conteudo = file_get_contents($arquivo);
@@ -11,7 +11,6 @@ function lerChamados() {
 } 
 
 function salvarChamados($chamados) {
-    $arquivo = "chamados.json";
     $json = json_encode($chamados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     file_put_contents($arquivo, $json);
 }
