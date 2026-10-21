@@ -101,7 +101,7 @@
                             <span>CSS</span>
                             <span>PHP</span>
                         </div>
-                        <a href="projetos/idade.php" class="link-projeto">
+                        <a href="/resources/views/projetos/idade.php" class="link-projeto">
                             Ver projeto
                         </a>
 
@@ -121,7 +121,7 @@
                             <span>CSS</span>
                             <span>PHP</span>
                         </div>
-                        <a href="projetos/notas.php" class="link-projeto">
+                        <a href="/resources/views/projetos/notas.php" class="link-projeto">
                             Ver projeto
                         </a>
                      </div>
@@ -140,7 +140,7 @@
                             <span>CSS</span>
                             <span>PHP</span>
                         </div>
-                        <a href="projetos/login-basico.php" class="link-projeto">
+                        <a href="/resources/views/projetos/login-basico.php" class="link-projeto">
                             Ver projeto
                         </a>
                      </div>
@@ -160,7 +160,7 @@
                             <span>CSS</span>
                             <span>PHP</span>
                         </div>
-                        <a href="projetos/jogos.php" class="link-projeto">
+                        <a href="/resources/views/projetos/jogos.php" class="link-projeto">
                             Ver projeto
                         </a>
                      </div>
@@ -181,7 +181,7 @@
                             <span>PHP</span>
                             <span>JSON</span>
                         </div>
-                        <a href="projetos/helpdesk.php" class="link-projeto">
+                        <a href="/resources/views/projetos/helpdesk.php" class="link-projeto">
                             Ver projeto
                         </a>
                      </div>
