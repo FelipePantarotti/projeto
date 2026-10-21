@@ -1,5 +1,5 @@
 <?php
-        $nome = "";
+$nome = "";
         $idade = "";
         $resultado = "";
 
