@@ -1,7 +1,10 @@
 <?php
 
+// Caminho relativo correto considerando a pasta resources/views/projetos/
+define('CAMINHO_ARQUIVO', __DIR__ . '/../../../storage/data/chamados.json');
+
 function lerChamados() {
-    $arquivo = __DIR__. "../dados/chamados.json";
+    $arquivo = CAMINHO_ARQUIVO;
 
     if (file_exists($arquivo)) {
         $conteudo = file_get_contents($arquivo);
@@ -11,7 +14,15 @@ function lerChamados() {
 } 
 
 function salvarChamados($chamados) {
+    $arquivo = CAMINHO_ARQUIVO;
     $json = json_encode($chamados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    
+    // Garante que o diretório existe
+    $diretorio = dirname($arquivo);
+    if (!is_dir($diretorio)) {
+        mkdir($diretorio, 0777, true);
+    }
+
     file_put_contents($arquivo, $json);
 }
 
