@@ -43,7 +43,7 @@ $nome = "";
         <h2><?= $nome ?> é <?= $resultado ?>.</h2>
 
     <?php } ?>
-    <a href="../index.php" class="bt-voltar">Voltar ao início</a>
+    <a href="../../../index.php" class="bt-voltar">Voltar ao início</a>
     </div>
 </body>
 </html>
