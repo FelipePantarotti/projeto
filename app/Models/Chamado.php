@@ -5,11 +5,9 @@ class Chamado {
     private string $arquivo;
 
     public function __construct() {
-        // Define o caminho absoluto para o arquivo JSON
         $this->arquivo = __DIR__ . "/../../storage/data/chamados.json";
     }
 
-    // Auxiliar para criar o diretório caso ele não exista
     private function garantirDiretorio(): void {
         $diretorio = dirname($this->arquivo);
         if (!is_dir($diretorio)) {
@@ -17,7 +15,6 @@ class Chamado {
         }
     }
 
-    // READ - Ler todos os chamados
     public function lerChamados(): array {
         $this->garantirDiretorio();
 
@@ -31,7 +28,6 @@ class Chamado {
         return is_array($chamados) ? $chamados : [];
     }
 
-    // Salvar os chamados no JSON
     public function salvarChamados(array $chamados): bool {
         $this->garantirDiretorio();
 
@@ -41,7 +37,6 @@ class Chamado {
         ) !== false;
     }
 
-    // CREATE - Cadastrar chamados
     public function cadastrarChamados(string $nome, string $setor, string $equipamento, string $descricao, string $prioridade): bool {
         if (trim($nome) === "" || trim($descricao) === "") {
             return false;
@@ -63,7 +58,6 @@ class Chamado {
         return $this->salvarChamados($chamados);
     }
 
-    // UPDATE - Atualizar status do chamado
     public function atualizarChamado(int $posicao, string $novoStatus): bool {
         $chamados = $this->lerChamados();
         
@@ -82,7 +76,6 @@ class Chamado {
         return $this->salvarChamados($chamados);
     }
 
-    // DELETE - Excluir chamados
     public function excluirChamado(int $posicao): bool {
         $chamados = $this->lerChamados();
 
@@ -96,7 +89,6 @@ class Chamado {
         return $this->salvarChamados($chamados);
     }
 
-    // Relatório de atendimentos
     public function gerarRelatorio(): array {
         $chamados = $this->lerChamados();
 
