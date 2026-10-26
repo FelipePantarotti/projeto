@@ -1,47 +1,49 @@
 <?php
-
 require_once "Chamado.php";
 
-// Instancia a classe para utilizar seus métodos
+// Instancia o objeto da classe Chamado
 $chamadoObj = new Chamado();
+$mensagem = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Processa requisições POST
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $acao = $_POST["acao"] ?? "";
 
-    if ($acao == "cadastrar") {
-        $nome = $_POST["nome"] ?? "";
-        $setor = $_POST["setor"] ?? "";
-        $equipamento = $_POST["equipamento"] ?? "";
-        $descricao = $_POST["descricao"] ?? "";
-        $prioridade = $_POST["prioridade"] ?? "";
+    if ($acao === "cadastrar") {
+        $sucesso = $chamadoObj->cadastrarChamados(
+            $_POST["nome"] ?? "",
+            $_POST["setor"] ?? "",
+            $_POST["equipamento"] ?? "",
+            $_POST["descricao"] ?? "",
+            $_POST["prioridade"] ?? ""
+        );
 
-        $chamadoObj->cadastrarChamados($nome, $setor, $equipamento, $descricao, $prioridade);
-    } 
-    else if ($acao == "atualizar") {
-        $posicao = $_POST["posicao"] ?? null;
-        $novoStatus = $_POST["status"] ?? "";
+        $mensagem = $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verifique os dados.";
+    }
+    
+    if ($acao === "atualizar") {
+        $sucesso = $chamadoObj->atualizarChamado(
+            (int) ($_POST["posicao"] ?? -1),
+            $_POST["status"] ?? ""
+        );
 
-        if ($posicao !== null) {
-            $chamadoObj->atualizarStatusChamado((int)$posicao, $novoStatus);
-        }
-    }           
-    else if ($acao == "excluir") {
-        $posicao = $_POST["posicao"] ?? null;
-
-        if ($posicao !== null) {
-            $chamadoObj->excluirChamado((int)$posicao);
-        }
+        $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
     }
 
-    // Redireciona para evitar reenvio de formulário ao atualizar com F5 (Padrão PRG)
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit();
+    if ($acao === "excluir") {
+        $sucesso = $chamadoObj->excluirChamado((int) ($_POST["posicao"] ?? -1));
+
+        $mensagem = $sucesso ? "Chamado excluído!" : "Não foi possível excluir.";
+    }
 }
 
-// Busca a lista e o relatório via métodos da classe
+// Carrega a lista atualizada e o relatório
 $chamados = $chamadoObj->lerChamados();
-$relatorio = $chamadoObj->gerarRelatorio($chamados);
+$relatorio = $chamadoObj->gerarRelatorio();
 
+function escapar($valor) {
+    return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,11 +52,17 @@ $relatorio = $chamadoObj->gerarRelatorio($chamados);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/helpdesk.css">
-    <title>Chamados</title>
+    <title>Sistema de Chamados</title>
 </head>
 <body>
-    <form method="POST">
 
+    <?php if (!empty($mensagem)): ?>
+        <div style="padding: 10px; background-color: #f0f0f0; margin-bottom: 15px;">
+            <strong><?php echo escapar($mensagem); ?></strong>
+        </div>
+    <?php endif; ?>
+
+    <form method="POST">
         <label>Nome:</label>
         <input type="text" name="nome" required>
 
@@ -87,11 +95,8 @@ $relatorio = $chamadoObj->gerarRelatorio($chamados);
         </select>
 
         <input type="hidden" name="acao" value="cadastrar">
-
         <button type="submit">Enviar</button>
-        
         <a href="/index.php" class="bt-voltar">Voltar ao início</a>
-
     </form>
 
     <h2>Lista Dos Chamados</h2>
@@ -109,14 +114,14 @@ $relatorio = $chamadoObj->gerarRelatorio($chamados);
             </tr>
         </thead>
         <tbody>
-            <?php foreach($chamados as $posicao => $chamado){ ?>
+            <?php foreach($chamados as $posicao => $chamado): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($posicao); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['nome'] ?? ''); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['setor'] ?? ''); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['equipamento'] ?? ''); ?></td>
-                    <td><?php echo nl2br(htmlspecialchars($chamado['descricao'] ?? '')); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['prioridade'] ?? ''); ?></td>
+                    <td><?php echo escapar($posicao); ?></td>
+                    <td><?php echo escapar($chamado['nome'] ?? ''); ?></td>
+                    <td><?php echo escapar($chamado['setor'] ?? ''); ?></td>
+                    <td><?php echo escapar($chamado['equipamento'] ?? ''); ?></td>
+                    <td><?php echo nl2br(escapar($chamado['descricao'] ?? '')); ?></td>
+                    <td><?php echo escapar($chamado['prioridade'] ?? ''); ?></td>
                     
                     <td>
                         <form method="POST">
@@ -124,9 +129,9 @@ $relatorio = $chamadoObj->gerarRelatorio($chamados);
                             <input type="hidden" name="posicao" value="<?php echo $posicao; ?>">
                             
                             <select name="status">
-                                <option value="Aberto" <?php if(($chamado['status'] ?? '') == 'Aberto') echo 'selected'; ?>>Aberto</option>
-                                <option value="Em andamento" <?php if(($chamado['status'] ?? '') == 'Em andamento') echo 'selected'; ?>>Em andamento</option>
-                                <option value="Resolvido" <?php if(($chamado['status'] ?? '') == 'Resolvido') echo 'selected'; ?>>Resolvido</option>
+                                <option value="Aberto" <?php if(($chamado['status'] ?? '') === 'Aberto') echo 'selected'; ?>>Aberto</option>
+                                <option value="Em andamento" <?php if(($chamado['status'] ?? '') === 'Em andamento') echo 'selected'; ?>>Em andamento</option>
+                                <option value="Resolvido" <?php if(($chamado['status'] ?? '') === 'Resolvido') echo 'selected'; ?>>Resolvido</option>
                             </select>
                             <button type="submit">OK</button>
                         </form>
@@ -140,16 +145,16 @@ $relatorio = $chamadoObj->gerarRelatorio($chamados);
                         </form>
                     </td>
                 </tr>
-            <?php } ?>
+            <?php endforeach; ?>
         </tbody>
     </table>   
 
     <div>
         <h3>Relatório de Atendimentos</h3>
-        <p>Total de chamados: <?php echo htmlspecialchars($relatorio["total"] ?? 0); ?></p>
-        <p>Abertos: <?php echo htmlspecialchars($relatorio["abertos"] ?? 0); ?></p>
-        <p>Em andamento: <?php echo htmlspecialchars($relatorio["em_andamento"] ?? 0); ?></p>
-        <p>Resolvido: <?php echo htmlspecialchars($relatorio["resolvidos"] ?? 0); ?></p>
+        <p>Total de chamados: <?php echo escapar($relatorio["total"] ?? 0); ?></p>
+        <p>Abertos: <?php echo escapar($relatorio["abertos"] ?? 0); ?></p>
+        <p>Em andamento: <?php echo escapar($relatorio["andamento"] ?? 0); ?></p>
+        <p>Resolvidos: <?php echo escapar($relatorio["resolvidos"] ?? 0); ?></p>
     </div>
 
 </body>
