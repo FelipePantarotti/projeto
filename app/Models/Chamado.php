@@ -6,7 +6,7 @@ class Chamado {
 
     public function __construct() {
         // Define o caminho absoluto para o arquivo JSON
-        $this->arquivo = __DIR__ . "/../dados/chamados.json";
+        $this->arquivo = __DIR__ . "/../../storage/data/chamados.json";
     }
 
     // Auxiliar para criar o diretório caso ele não exista

@@ -1,5 +1,5 @@
 <?php
-require_once "Chamado.php";
+require_once __DIR__ . "/../../../app/Models/Chamado.php";
 
 // Instancia o objeto da classe Chamado
 $chamadoObj = new Chamado();
@@ -51,7 +51,7 @@ function escapar($valor) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/helpdesk.css">
+    <link rel="stylesheet" href="/resources/css/helpdesk.css">
     <title>Sistema de Chamados</title>
 </head>
 <body>
