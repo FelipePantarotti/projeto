@@ -2,6 +2,9 @@
 
 require_once "Chamado.php";
 
+// Instancia a classe para utilizar seus métodos
+$chamadoObj = new Chamado();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $acao = $_POST["acao"] ?? "";
 
@@ -12,21 +15,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $descricao = $_POST["descricao"] ?? "";
         $prioridade = $_POST["prioridade"] ?? "";
 
-        cadastrarChamados($nome, $setor, $equipamento, $descricao, $prioridade);
+        $chamadoObj->cadastrarChamados($nome, $setor, $equipamento, $descricao, $prioridade);
     } 
     else if ($acao == "atualizar") {
         $posicao = $_POST["posicao"] ?? null;
         $novoStatus = $_POST["status"] ?? "";
 
         if ($posicao !== null) {
-            atualizarStatusChamado($posicao, $novoStatus);
+            $chamadoObj->atualizarStatusChamado((int)$posicao, $novoStatus);
         }
     }           
     else if ($acao == "excluir") {
         $posicao = $_POST["posicao"] ?? null;
 
         if ($posicao !== null) {
-            excluirChamado($posicao);
+            $chamadoObj->excluirChamado((int)$posicao);
         }
     }
 
@@ -35,8 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
-$chamados = lerChamados();
-$relatorio = gerarRelatorio($chamados);
+// Busca a lista e o relatório via métodos da classe
+$chamados = $chamadoObj->lerChamados();
+$relatorio = $chamadoObj->gerarRelatorio($chamados);
 
 ?>
 
@@ -108,11 +112,11 @@ $relatorio = gerarRelatorio($chamados);
             <?php foreach($chamados as $posicao => $chamado){ ?>
                 <tr>
                     <td><?php echo htmlspecialchars($posicao); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['nome']); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['setor']); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['equipamento']); ?></td>
-                    <td><?php echo nl2br(htmlspecialchars($chamado['descricao'])); ?></td>
-                    <td><?php echo htmlspecialchars($chamado['prioridade']); ?></td>
+                    <td><?php echo htmlspecialchars($chamado['nome'] ?? ''); ?></td>
+                    <td><?php echo htmlspecialchars($chamado['setor'] ?? ''); ?></td>
+                    <td><?php echo htmlspecialchars($chamado['equipamento'] ?? ''); ?></td>
+                    <td><?php echo nl2br(htmlspecialchars($chamado['descricao'] ?? '')); ?></td>
+                    <td><?php echo htmlspecialchars($chamado['prioridade'] ?? ''); ?></td>
                     
                     <td>
                         <form method="POST">
@@ -138,7 +142,7 @@ $relatorio = gerarRelatorio($chamados);
                 </tr>
             <?php } ?>
         </tbody>
-    </table>  
+    </table>   
 
     <div>
         <h3>Relatório de Atendimentos</h3>
