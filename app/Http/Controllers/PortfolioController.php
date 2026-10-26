@@ -3,7 +3,7 @@
     class PortfolioController{
 
         public function index(){
-            require __DIR__ . "/../../../resources/views/portfolio.php";
+            require_once __DIR__ . "/../../../resources/views/portfolio.php";
         }
     }
 

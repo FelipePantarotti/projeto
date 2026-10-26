@@ -3,7 +3,7 @@
     class HelpdeskController{
 
         public function index(){
-            require __DIR__ . "/../../../index.php";
+            require_once __DIR__ . "/../../../index.php";
         }
     }
 
