@@ -44,16 +44,6 @@ abstract class Personagem {
     // Toda classe filha deverá implementar atacar()
     abstract public function atacar();
 }
-
-$felipe = new Personagem("Felipe", 100, 30);
-
-$felipe->setVida(75);
-
-$pedro = new Personagem("Pedro", 50, 15);
-$sebastian = new Personagem("Sebastian", 50, 15);
-
-$felipe->atacar();
-
 class Guerreiro extends Personagem {
     // Sobreescrevendo o método da classe pai
     public function atacar(){
@@ -90,6 +80,8 @@ $personagens = [$guerreiro, $mago, $curandeiro];
 foreach($personagens as $p){
     $p->atacar();
 }
+
+$guerreiro->setVida(60);
 
 echo "Vida antes da cura: " . $guerreiro->getVida() . "\n";
 
