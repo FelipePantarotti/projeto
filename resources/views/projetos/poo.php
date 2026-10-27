@@ -75,6 +75,12 @@ $guerreiro = new Guerreiro("Felipe", 100, 30);
 $mago = new Mago("Pedro", 50, 15);
 $personagem = new Personagem("Sebastian", 50, 15);
 
+$personagens = [$guerreiro, $mago, $personagem];
+
+foreach($personagens as $p){
+    $p->atacar();
+}
+
 // 1. O que é uma classe?
 // Um molde para criar objetos
 
