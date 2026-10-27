@@ -42,7 +42,7 @@ class Personagem {
     }
 
     public function atacar(){
-        echo "$this->nome realizou um ataque!";
+        echo "$this->nome realizou um ataque!\n";
     }
 }
 
@@ -58,16 +58,16 @@ $felipe->atacar();
 class Guerreiro extends Personagem {
     // Sobreescrevendo o método da classe pai
     public function atacar(){
-        echo "$this->nome atacou com uma espada!";
+        echo "$this->nome atacou com uma espada!\n";
     }
     public function defender(){
-        echo "$this->nome levantou o escudo!";
+        echo "$this->nome levantou o escudo!\n";
     }
 }
 class Mago extends Personagem {
     // Sobreescrevendo o método da classe pai
     public function atacar(){
-        echo "$this->nome lançou uma bola de fogo!";
+        echo "$this->nome lançou uma bola de fogo!\n";
     }
 }
 
