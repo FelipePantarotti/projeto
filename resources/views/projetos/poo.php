@@ -91,7 +91,11 @@ foreach($personagens as $p){
     $p->atacar();
 }
 
+echo "Vida antes da cura: " . $guerreiro->getVida() . "\n";
+
 $curandeiro->curar($guerreiro, 50);
+
+echo "Vida depois da cura: " . $guerreiro->getVida() . "\n";
 
 // 1. O que é uma classe?
 // Um molde para criar objetos
