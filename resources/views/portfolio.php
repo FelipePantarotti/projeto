@@ -76,9 +76,18 @@
                 <div class="habilidade">
                     JAVA SCRIPT
                 </div>
+                <div class="habilidade">
+                    REACT
+                </div>
+                <div class="habilidade">
+                    LINGUAGEM C
+                </div>
+                <div class="habilidade">
+                    PYTHON
+                </div>
             </div>
         </section>
-
+        
         <section>
             <section id="projetos" class="secao">
                 <h2 class="titulo-secao">Meus Projetos</h2>
