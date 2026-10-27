@@ -4,3 +4,87 @@ O = Orientada
 O = Objetos
 -->
 
+<?php
+
+// ENCAPSULAMENTO
+// Proteger informações para que não sejam alteradas de qualquer jeito.
+// HERANÇA
+// Criar uma classe nova aproveitando características de outro.
+// POLIMORFISMO
+// Permitir que objetos diferentes respondam à mesma ação de maneiras diferentes.
+// ABSTRAÇÃO 
+// Mostrar o que é necessário e esconder detalhes complicados de funcionamento.
+
+class Personagem {
+    public $nome;
+    private $vida = 100;
+    public $dano = 10;
+    
+    public function __construct($nome,$vida,$dano){
+        $this->nome = $nome;
+        $this->vida = $vida;
+        $this->dano = $dano;
+    }
+
+    // GETTER
+    public function getVida(){
+        return $this->vida;
+    }
+
+    // SETTER
+    public function setVida($vida){
+        if ($vida < 0){
+            echo "Vida não pode ser menor que 0!";
+            return;
+        }
+
+        $this->vida = $vida;
+    }
+
+    public function atacar(){
+        echo "$this->nome realizou um ataque!";
+    }
+}
+
+$felipe = new Personagem("Felipe", 100, 30);
+
+$felipe->setVida(75);
+
+$pedro = new Personagem("Pedro", 50, 15);
+$sebastian = new Personagem("Sebastian", 50, 15);
+
+$felipe->atacar();
+
+class Guerreiro extends Personagem {
+    // Sobreescrevendo o método da classe pai
+    public function atacar(){
+        echo "$this->nome atacou com uma espada!";
+    }
+    public function defender(){
+        echo "$this->nome levantou o escudo!";
+    }
+}
+class Mago extends Personagem {
+    // Sobreescrevendo o método da classe pai
+    public function atacar(){
+        echo "$this->nome lançou uma bola de fogo!";
+    }
+}
+
+$guerreiro = new Guerreiro("Felipe", 100, 30);
+$mago = new Mago("Pedro", 50, 15);
+$personagem = new Personagem("Sebastian", 50, 15);
+
+// 1. O que é uma classe?
+// Um molde para criar objetos
+
+// 2. O que significa new Personagem()?
+// Criar um objeto da classe Personagem
+
+// 3. Para que serve $this->nome?
+// Acessar o nome do objeto atual
+
+// 4. O que significa extends?
+// Herdar características e métodos de outra classe
+
+?>
