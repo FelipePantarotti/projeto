@@ -1,6 +1,7 @@
 
 /* ==========================================
    SISTEMA DE CONTROLE DE PRODUÇÃO INDUSTRIAL
+   ESTILO INDUSTRIAL MINIMALISTA
    ========================================== */
 
 * {
@@ -13,31 +14,49 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f8;
-    color: #202024;
-    line-height: 1.7;
-    padding: 40px 20px;
+:root {
+    --fundo: #f1f2f4;
+    --superficie: #ffffff;
+    --superficie-hover: #f7f7f9;
+    --preto: #171719;
+    --cinza-escuro: #38383d;
+    --cinza: #73737d;
+    --borda: #e2e3e7;
+    --roxo: #7452c8;
+    --roxo-hover: #5d3eac;
+    --roxo-claro: #f2effb;
+    --sombra: 0 8px 30px rgba(20, 20, 25, 0.045);
 }
 
-/* FORMULÁRIO */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--preto);
+    line-height: 1.6;
+    padding: 48px 24px;
+}
+
+/* ==========================================
+   FORMULÁRIO
+   ========================================== */
 
 body > form {
-    max-width: 650px;
+    max-width: 620px;
     margin: 0 auto 30px;
-    padding: 35px;
-    background-color: #ffffff;
-    border: 1px solid #e5e5e9;
-    border-radius: 12px;
-    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+    padding: 34px;
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
 }
 
 label {
     display: block;
-    margin-bottom: 6px;
-    color: #303036;
-    font-weight: bold;
+    margin-bottom: 7px;
+    color: var(--cinza-escuro);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
 input[type="text"],
@@ -45,171 +64,213 @@ input[type="number"],
 select {
     display: block;
     width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #202024;
+    min-height: 46px;
+    margin-bottom: 22px;
+    padding: 11px 13px;
+
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--preto);
+
     background-color: #fafafa;
-    border: 1px solid #dedee3;
-    border-radius: 7px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
     outline: none;
+
     transition: border-color 0.2s ease,
-                box-shadow 0.2s ease;
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
 }
 
-/* EFEITO AO SELECIONAR UM CAMPO */
+input::placeholder {
+    color: #a0a0a8;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+    border-color: #c5c5ce;
+}
 
 input[type="text"]:focus,
 input[type="number"]:focus,
 select:focus {
-    border-color: #8b5cf6;
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+    background-color: #ffffff;
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 3px rgba(116, 82, 200, 0.11);
 }
 
-/* BOTÃO DE CADASTRO */
+/* ==========================================
+   BOTÃO
+   ========================================== */
 
 button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #8b5cf6;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 18px;
+
+    font-family: inherit;
     font-size: 14px;
-    font-weight: bold;
-    border: none;
-    border-radius: 7px;
+    font-weight: 700;
+    color: #ffffff;
+
+    background-color: var(--preto);
+    border: 1px solid var(--preto);
+    border-radius: 8px;
+
     cursor: pointer;
+
     transition: background-color 0.2s ease,
+                border-color 0.2s ease,
                 transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #7444df;
-    transform: translateY(-2px);
+    background-color: var(--roxo);
+    border-color: var(--roxo);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 button:focus-visible {
-    outline: 3px solid rgba(139, 92, 246, 0.35);
+    outline: 3px solid rgba(116, 82, 200, 0.3);
     outline-offset: 3px;
 }
 
-/* MENSAGEM DE RETORNO */
+/* ==========================================
+   MENSAGENS DO SISTEMA
+   ========================================== */
 
 body > p {
-    max-width: 650px;
-    margin: 0 auto 25px;
-    padding: 12px 16px;
-    background-color: #f7f4ff;
-    border-left: 4px solid #8b5cf6;
-    border-radius: 5px;
-    color: #303036;
+    max-width: 620px;
+    margin: 0 auto 24px;
+    padding: 13px 16px;
+
+    color: var(--cinza-escuro);
+    font-size: 14px;
+
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--roxo);
+    border-radius: 8px;
 }
 
-/* TABELA DE PRODUÇÃO */
+/* ==========================================
+   TABELA DE PRODUÇÃO
+   ========================================== */
 
 table {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto 40px;
+
     border-collapse: separate;
     border-spacing: 0;
-    background-color: #ffffff;
-    border: 1px solid #e5e5e9;
+
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
     border-radius: 12px;
-    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+
+    box-shadow: var(--sombra);
     overflow: hidden;
 }
 
-/* CABEÇALHO DA TABELA */
+/* CABEÇALHO */
 
 thead {
-    background-color: #8b5cf6;
+    background-color: #202024;
     color: #ffffff;
 }
 
 th {
-    padding: 16px 14px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
+    padding: 17px 18px;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #35353b;
 }
 
 /* CÉLULAS */
 
 td {
-    padding: 18px 14px;
-    border-bottom: 1px solid #e5e5e9;
-    color: #52525b;
+    padding: 17px 18px;
+
+    color: var(--cinza-escuro);
     font-size: 14px;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
-}
 
-/* LINHAS ALTERNADAS */
-
-tbody tr:nth-child(even) {
-    background-color: #fafafa;
+    border-bottom: 1px solid #ededf0;
 }
 
 tbody tr {
-    transition: background-color 0.2s ease;
+    background-color: #ffffff;
+
+    transition: background-color 0.18s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafb;
 }
 
 tbody tr:hover {
-    background-color: #f0ebff;
+    background-color: var(--roxo-claro);
 }
-
-/* NOME DA MÁQUINA */
-
-td:first-child {
-    color: #8b5cf6;
-    font-weight: bold;
-}
-
-/* TIPO DA MÁQUINA */
-
-td:nth-child(2) {
-    color: #303036;
-    font-weight: bold;
-}
-
-/* QUANTIDADE PRODUZIDA */
-
-td:nth-child(3) {
-    color: #7047c7;
-    font-weight: bold;
-}
-
-/* STATUS DA OPERAÇÃO */
-
-td strong {
-    color: #52525b;
-    font-weight: bold;
-}
-
-/* REMOVE A BORDA DA ÚLTIMA LINHA */
 
 tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* MENSAGEM DE TABELA VAZIA */
+/* NOME DA MÁQUINA */
 
-body > p:last-child {
-    color: #52525b;
+td:first-child {
+    color: var(--preto);
+    font-weight: 700;
 }
 
-/* RESPONSIVIDADE PARA TABLETS */
+/* TIPO DA MÁQUINA */
+
+td:nth-child(2) {
+    color: var(--cinza-escuro);
+}
+
+/* QUANTIDADE PRODUZIDA */
+
+td:nth-child(3) {
+    color: var(--roxo);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+/* OPERAÇÃO DA MÁQUINA */
+
+td strong {
+    color: var(--cinza-escuro);
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
 
 @media (max-width: 800px) {
     body {
-        padding: 25px 12px;
+        padding: 28px 14px;
     }
 
     body > form {
-        padding: 25px 20px;
+        padding: 26px 22px;
     }
 
     table {
@@ -220,40 +281,38 @@ body > p:last-child {
 
     th,
     td {
-        padding: 14px 12px;
-    }
-
-    button {
-        padding: 11px 16px;
+        padding: 14px;
     }
 }
 
-/* RESPONSIVIDADE PARA CELULARES */
-
 @media (max-width: 480px) {
     body {
-        padding: 15px 10px;
+        padding: 18px 10px;
     }
 
     body > form {
-        padding: 20px 15px;
+        padding: 22px 16px;
+        border-radius: 11px;
     }
 
     input[type="text"],
     input[type="number"],
     select {
-        padding: 11px;
         font-size: 14px;
+        margin-bottom: 18px;
     }
 
     button {
-        width: 100%;
-        padding: 12px;
+        min-height: 44px;
+    }
+
+    th {
+        font-size: 11px;
     }
 
     th,
     td {
-        padding: 12px 10px;
-        font-size: 13px;
+        padding: 12px;
+        font-size: 12px;
     }
 }
