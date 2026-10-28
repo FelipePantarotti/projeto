@@ -120,5 +120,33 @@ function escapar($texto){
 
         <button type="submit">Registro da Produção</button>
     </form>
+
+    <?php if (!empty($_SESSION["máquinas"])): ?>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nome da Máquina</th>
+                <th>Tipo (Classe)</th>
+                <th>Quantidade Produzida</th>
+                <th>Status / Operação (`operar()`)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($_SESSION["máquinas"] as $maquina): ?>
+                <tr>
+                    <td><?= escapar($maquina->nome) ?></td>
+
+                    <td><?= get_class($maquina) ?></td>
+
+                    <td><?= $maquina->getProducao() ?> unidades</td>
+
+                    <td><strong><?= $maquina->operar() ?></strong></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php else: ?>
+    <p>Nenhuma máquina foi cadastrada ainda.</p>
+<?php endif; ?>
 </body>
 </html>
