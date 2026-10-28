@@ -8,16 +8,16 @@ html {
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f8;
-    color: #202024;
+    background-color: #f7f7f7;
+    color: #202020;
     line-height: 1.7;
 }
 header {
-    background-color: #111114;
+    background-color: #111111;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #29292f;
+    border-bottom: 1px solid #292929;
 }
 .navbar {
     max-width: 1100px;
@@ -37,18 +37,18 @@ header {
     list-style: none;
 }
 .menu a {
-    color: #d4d4d8;
+    color: #d4d4d4;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 .menu a:hover {
-    color: #c4a7ff;
+    color: #d4d4d4;
 }
 .inicio {
     min-height: 85vh;
     display: flex;
     align-items: center;
-    background: radial-gradient(ellipse at 78% 45%, #302344 0%, #1a1720 34%, #111114 75%);
+    background: radial-gradient(ellipse at 78% 45%, #303030 0%, #1a1a1a 34%, #111111 75%);
     color: white;
 }
 .inicio-conteudo {
@@ -58,7 +58,7 @@ header {
     padding: 70px 0;
 }
 .saudacao {
-    color: #c4a7ff;
+    color: #d4d4d4;
     font-size: 20px;
     margin-bottom: 10px;
     letter-spacing: 1px;
@@ -70,19 +70,19 @@ header {
 }
 .inicio h2 {
     font-size: 30px;
-    color: #c4c4cc;
+    color: #c4c4c4;
     margin-bottom: 20px;
     font-weight: 500;
 }
 .inicio-conteudo > p {
     max-width: 600px;
-    color: #dedee3;
+    color: #dedede;
 }
 .botao {
     display: inline-block;
     margin-top: 30px;
     padding: 12px 25px;
-    background-color: #8b5cf6;
+    background-color: #343434;
     color: white;
     text-decoration: none;
     border-radius: 7px;
@@ -90,7 +90,7 @@ header {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .botao:hover {
-    background-color: #7444df;
+    background-color: #1f1f1f;
     transform: translateY(-2px);
 }
 .secao {
@@ -102,11 +102,11 @@ header {
     font-size: 35px;
     text-align: center;
     margin-bottom: 10px;
-    color: #17171b;
+    color: #171717;
 }
 .subtitulo-secao {
     text-align: center;
-    color: #71717a;
+    color: #717171;
     margin-bottom: 40px;
 }
 .sobre-conteudo {
@@ -120,29 +120,29 @@ header {
     height: 200px;
     min-width: 200px;
     border-radius: 50%;
-    background: linear-gradient(145deg, #8b5cf6, #393044);
+    background: linear-gradient(145deg, #343434, #393939);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 60px;
     font-weight: bold;
-    box-shadow: 0 12px 35px rgba(73, 48, 112, 0.2);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
 }
 .sobre-texto h3 {
     font-size: 25px;
     margin-bottom: 15px;
-    color: #202024;
+    color: #202020;
 }
 .sobre-texto p {
     margin-bottom: 15px;
-    color: #52525b;
+    color: #525252;
 }
 .secao-destaque {
     max-width: 100%;
-    background-color: #ededf0;
-    border-top: 1px solid #e2e2e6;
-    border-bottom: 1px solid #e2e2e6;
+    background-color: #ededed;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
 }
 .secao-destaque > * {
     max-width: 1100px;
@@ -157,17 +157,17 @@ header {
 }
 .habilidade {
     background-color: #fff;
-    color: #303036;
+    color: #303030;
     padding: 15px 25px;
-    border: 1px solid #dedee3;
+    border: 1px solid #dedede;
     border-radius: 8px;
     font-weight: bold;
-    box-shadow: 0 4px 14px rgba(20, 20, 25, 0.05);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 .habilidade:hover {
     transform: translateY(-3px);
-    border-color: #a78bfa;
+    border-color: #a0a0a0;
 }
 .projetos-container {
     display: grid;
@@ -177,29 +177,29 @@ header {
 .projeto-card {
     background-color: white;
     padding: 30px;
-    border: 1px solid #e5e5e9;
+    border: 1px solid #e5e5e5;
     border-radius: 12px;
-    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
     transition: 0.3s;
 }
 .projeto-card:hover {
     transform: translateY(-5px);
-    border-color: #c4b5fd;
-    box-shadow: 0 12px 28px rgba(57, 42, 83, 0.12);
+    border-color: #c4c4c4;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 .projeto-numero {
     font-size: 35px;
     font-weight: bold;
-    color: #8b5cf6;
+    color: #343434;
     margin-bottom: 15px;
 }
 .projeto-card h3 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #202024;
+    color: #202020;
 }
 .projeto-card p {
-    color: #62626b;
+    color: #626262;
     margin-bottom: 20px;
 }
 .tecnologia {
@@ -209,20 +209,20 @@ header {
     margin-bottom: 20px;
 }
 .tecnologia span {
-    background-color: #f0ebff;
-    color: #6842b8;
+    background-color: #f0f0f0;
+    color: #4a4a4a;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 13px;
     font-weight: bold;
 }
 .link-projeto {
-    color: #7047c7;
+    color: #343434;
     text-decoration: none;
     font-weight: bold;
 }
 .link-projeto:hover {
-    color: #4f2c9c;
+    color: #1f1f1f;
     text-decoration: underline;
 }
 .contato-container {
@@ -236,20 +236,20 @@ header {
     width: 280px;
     padding: 25px;
     text-align: center;
-    border: 1px solid #e5e5e9;
+    border: 1px solid #e5e5e5;
     border-radius: 10px;
-    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
 }
 .contato-item h3 {
-    color: #7047c7;
+    color: #343434;
     margin-bottom: 5px;
 }
 footer {
-    background-color: #111114;
-    color: #c4c4cc;
+    background-color: #111111;
+    color: #c4c4c4;
     text-align: center;
     padding: 30px;
-    border-top: 1px solid #29292f;
+    border-top: 1px solid #292929;
 }
 @media (max-width: 800px) {
     .navbar {
@@ -286,8 +286,8 @@ footer {
 }
 /* Refinos visuais */
 .projeto-card { display: flex; flex-direction: column; }
-.projeto-card .link-projeto { align-self: flex-start; margin-top: auto; padding: 10px 16px; color: #fff; background: #7047c7; border-radius: 6px; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
-.projeto-card .link-projeto:hover { color: #fff; background: #4f2c9c; text-decoration: none; transform: translateY(-2px); }
+.projeto-card .link-projeto { align-self: flex-start; margin-top: auto; padding: 10px 16px; color: #fff; background: #343434; border-radius: 6px; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
+.projeto-card .link-projeto:hover { color: #fff; background: #1f1f1f; text-decoration: none; transform: translateY(-2px); }
 .botao { border-radius: 6px; }
 @media (min-width: 801px) { .projetos-container { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); } }
 @media (max-width: 600px) { .secao { padding: 65px 18px; } .inicio { min-height: 75vh; } .inicio h1 { font-size: clamp(34px, 10vw, 44px); } .projeto-card { padding: 24px; } }
