@@ -1,0 +1,259 @@
+
+/* ==========================================
+   SISTEMA DE CONTROLE DE PRODUÇÃO INDUSTRIAL
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f8;
+    color: #202024;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+/* FORMULÁRIO */
+
+body > form {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e9;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #303036;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #202024;
+    background-color: #fafafa;
+    border: 1px solid #dedee3;
+    border-radius: 7px;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* EFEITO AO SELECIONAR UM CAMPO */
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+/* BOTÃO DE CADASTRO */
+
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #8b5cf6;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #7444df;
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(139, 92, 246, 0.35);
+    outline-offset: 3px;
+}
+
+/* MENSAGEM DE RETORNO */
+
+body > p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    padding: 12px 16px;
+    background-color: #f7f4ff;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 5px;
+    color: #303036;
+}
+
+/* TABELA DE PRODUÇÃO */
+
+table {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e9;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(20, 20, 25, 0.06);
+    overflow: hidden;
+}
+
+/* CABEÇALHO DA TABELA */
+
+thead {
+    background-color: #8b5cf6;
+    color: #ffffff;
+}
+
+th {
+    padding: 16px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* CÉLULAS */
+
+td {
+    padding: 18px 14px;
+    border-bottom: 1px solid #e5e5e9;
+    color: #52525b;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* LINHAS ALTERNADAS */
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f0ebff;
+}
+
+/* NOME DA MÁQUINA */
+
+td:first-child {
+    color: #8b5cf6;
+    font-weight: bold;
+}
+
+/* TIPO DA MÁQUINA */
+
+td:nth-child(2) {
+    color: #303036;
+    font-weight: bold;
+}
+
+/* QUANTIDADE PRODUZIDA */
+
+td:nth-child(3) {
+    color: #7047c7;
+    font-weight: bold;
+}
+
+/* STATUS DA OPERAÇÃO */
+
+td strong {
+    color: #52525b;
+    font-weight: bold;
+}
+
+/* REMOVE A BORDA DA ÚLTIMA LINHA */
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* MENSAGEM DE TABELA VAZIA */
+
+body > p:last-child {
+    color: #52525b;
+}
+
+/* RESPONSIVIDADE PARA TABLETS */
+
+@media (max-width: 800px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    body > form {
+        padding: 25px 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 14px 12px;
+    }
+
+    button {
+        padding: 11px 16px;
+    }
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    body > form {
+        padding: 20px 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+}
