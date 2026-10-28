@@ -17,8 +17,8 @@ O = Objetos
 
 abstract class Personagem {
     public $nome;
-    private $vida = 100;
-    public $dano = 10;
+    private $vida;
+    public $dano;
     
     public function __construct($nome,$vida,$dano){
         $this->nome = $nome;
