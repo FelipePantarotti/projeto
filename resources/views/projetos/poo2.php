@@ -101,12 +101,24 @@ function escapar($texto){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produção</title>
 </head>
 <body>
     <form method="POST">
+
         <label>Nome da máquina</label>
-        <input type="text" name="tipo">
+        <input type="text" id ="nome" name="nome">
+
+        <select type="text" name="nome" id="tipo">
+            <option value="esteira">Esteira</option>
+            <option value="prensa">Prensa</option>
+            <option value="robosoldagem">Robô de Soldagem</option>
+        </select>
+
+        <label>Quantidade da produção</label>
+        <input type="number" id="quantidade" name="quantidade" min="1">
+
+        <button type="submit">Registro da Produção</button>
     </form>
 </body>
 </html>
