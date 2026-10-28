@@ -107,19 +107,24 @@ function escapar($texto){
     <form method="POST">
 
         <label>Nome da máquina</label>
-        <input type="text" id ="nome" name="nome">
+        <input type="text" id ="nome" name="nome" required>
 
-        <select type="text" name="nome" id="tipo">
+        <label>Tipo da máquina</label>
+        <select type="text" name="tipo" id="tipo" required>
             <option value="esteira">Esteira</option>
             <option value="prensa">Prensa</option>
             <option value="robosoldagem">Robô de Soldagem</option>
         </select>
 
         <label>Quantidade da produção</label>
-        <input type="number" id="quantidade" name="quantidade" min="1">
+        <input type="number" id="quantidade" name="quantidade" min="1" required>
 
         <button type="submit">Registro da Produção</button>
     </form>
+
+    <?php if ($mensagem !== ""): ?>
+    <p><?= escapar($mensagem) ?></p>
+    <?php endif; ?>
 
     <?php if (!empty($_SESSION["máquinas"])): ?>
     <table border="1" cellpadding="8" cellspacing="0">
