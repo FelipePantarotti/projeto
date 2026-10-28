@@ -140,7 +140,7 @@ function escapar($texto){
             <?php foreach ($_SESSION["máquinas"] as $maquina): ?>
                 <tr>
                     <td><?= escapar($maquina->nome) ?></td>
-                    <td><?= get_class($maquina) ?></td>
+                    <td><?= ($maquina) ?></td>
                     <td><?= $maquina->getProducao() ?> unidades</td>
                     <td><?= $maquina->operar() ?></td>
                 </tr>
